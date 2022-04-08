@@ -11,6 +11,9 @@ public class HandleNumbers : MonoBehaviour
 
     private NumbersController controller; 
 
+    [SerializeField] private BoxCollider2D validate;
+    [SerializeField] private BoxCollider2D delete; 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -47,6 +50,15 @@ public class HandleNumbers : MonoBehaviour
                 {
                     controller.UpdateText(i+1);
                 }
+            }
+
+            if (GameObject.ReferenceEquals(validate, cubeHit.collider))
+            {
+                controller.checkCode(); 
+            }
+            else if (GameObject.ReferenceEquals(delete, cubeHit.collider))
+            {
+                controller.DeleteText();
             }
         }
  

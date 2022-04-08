@@ -17,6 +17,8 @@ public class NumbersController : MonoBehaviour
     private TMP_Text Text4; 
 
     private List<TMP_Text> Texts; 
+    [SerializeField] private string code = "6417"; 
+    private string testCode; 
 
     private int turn; 
     [SerializeField] private int maxNumbers = 4; 
@@ -24,6 +26,8 @@ public class NumbersController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {   
+        testCode = ""; 
+
         turn = 0; 
         Text1 = Number1.GetComponentInChildren<TextMeshPro>(); 
         Text2 = Number2.GetComponentInChildren<TextMeshPro>(); 
@@ -38,11 +42,48 @@ public class NumbersController : MonoBehaviour
     {
         if (turn < maxNumbers) 
         {
-            Texts[turn].text = number.ToString(); 
+            string snumber = number.ToString(); 
+            Texts[turn].text = snumber; 
             turn++; 
+            addTextCode(snumber);
         }
     }
 
 
-    
+    public void DeleteText()
+    {
+        if (turn > 0)
+        {
+            turn--;
+            Texts[turn].text = "*"; 
+            deleteTextCode(); 
+        }
+    }
+
+    // handle string code 
+    private void addTextCode(string number)
+    {
+        if (testCode.Length < maxNumbers)
+            testCode += number; 
+    }
+
+    private void deleteTextCode()
+    {
+        if (testCode.Length > 0)
+            testCode = testCode.Remove(testCode.Length - 1);
+    }
+
+    public void checkCode()
+    {
+        if (string.Equals(testCode, code))
+        {
+            // Change scene
+            Debug.Log("Je me barre au niveau 2");
+        }
+        else 
+        {
+            // TODO: Display error 
+            // Sound erreur 
+        }
+    }
 }

@@ -34,16 +34,7 @@ public class NumbersController : MonoBehaviour
     }
 
     
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.anyKey)
-            UpdateText(3); 
-    }
-
-
-    void UpdateText(int number) 
+    public void UpdateText(int number) 
     {
         if (turn < maxNumbers) 
         {

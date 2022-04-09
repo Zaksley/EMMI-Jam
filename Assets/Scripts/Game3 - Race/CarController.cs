@@ -26,7 +26,7 @@ public class CarController : MonoBehaviour
         rightLane.transform.position = new Vector3(rightLane.transform.position.x, transform.position.y, rightLane.transform.position.z);
         middleLane.transform.position = new Vector3(middleLane.transform.position.x, transform.position.y, middleLane.transform.position.z);
         leftLane.transform.position = new Vector3(leftLane.transform.position.x, transform.position.y, leftLane.transform.position.z);
-        mainCamera.transform.Translate(Vector3.up * Time.deltaTime * speed);
+        mainCamera.transform.position = new Vector3(0, middleLane.transform.position.y + 3, -10);
 
         //MOVEMENT
         if(transform.position.x == carSprite.transform.position.x) {
@@ -52,7 +52,6 @@ public class CarController : MonoBehaviour
                 }
             }
         }
-
     }
 
     public IEnumerator TurnAnimation(float angle) {
@@ -60,7 +59,7 @@ public class CarController : MonoBehaviour
         yield return new WaitForSeconds(.1f);
         carSprite.transform.rotation = Quaternion.Euler(new Vector3(0, 0, 180 + angle));
         yield return new WaitForSeconds(.1f);
-        carSprite.transform.rotation = Quaternion.Euler(new Vector3(0, 0, 180+(angle * turnSize - angle * turnSize/2)));
+        carSprite.transform.rotation = Quaternion.Euler(new Vector3(0, 0, 180 + (angle * turnSize - angle * turnSize/2)));
         yield return new WaitForSeconds(.1f);
         carSprite.transform.rotation = Quaternion.Euler(new Vector3(0, 0, 180));
     }

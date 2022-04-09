@@ -72,6 +72,7 @@ public class CarSprite : MonoBehaviour
             lives--;
             justLost = true;
             Destroy(tire[lives]);
+            movePoint.GetComponent<CarController>().speed = 9.5f;
             StartCoroutine(mainCamera.GetComponent<CameraShake>().Shake(1f, 0.1f));
             isBlinking = true;
             yield return new WaitForSeconds(0.25f);

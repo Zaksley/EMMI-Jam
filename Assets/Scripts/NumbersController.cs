@@ -28,7 +28,7 @@ public class NumbersController : MonoBehaviour
     private bool flashIndicator = false; 
     private int nbFlash = 0;
     [SerializeField] private int MaxNbFlash = 3; 
-    private bool win = false;
+    public bool win = false;
 
     // Start is called before the first frame update
     void Start()

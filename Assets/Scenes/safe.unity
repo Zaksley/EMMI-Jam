@@ -658,6 +658,8 @@ MonoBehaviour:
   Number4: {fileID: 185927422}
   code: 6417
   maxNumbers: 4
+  flashTime: 0.2
+  MaxNbFlash: 3
 --- !u!114 &391978743
 MonoBehaviour:
   m_ObjectHideFlags: 0

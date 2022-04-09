@@ -10,6 +10,7 @@ public class CarController : MonoBehaviour
     private GameObject mainCamera;
     public int speed;
     public GameObject carSprite;
+    public float turnSize;
 
 
     void Start()
@@ -30,8 +31,9 @@ public class CarController : MonoBehaviour
         //MOVEMENT
         if(transform.position.x == carSprite.transform.position.x) {
             if (Input.GetKeyDown(KeyCode.RightArrow)) { //LE JOUEUR VA À DROITE
+                StartCoroutine(TurnAnimation(-1f));
                 if (transform.position == rightLane.transform.position) { // si on est déjà à droite
-                    //bruit de blocage + crash
+                    //bruit de blocage
                     StartCoroutine(carSprite.GetComponent<CarSprite>().LoseLife());
                 } else if (transform.position == middleLane.transform.position) { // si on est au milieu
                     transform.position = rightLane.transform.position;
@@ -39,18 +41,28 @@ public class CarController : MonoBehaviour
                     transform.position = middleLane.transform.position;
                 }
             } else if (Input.GetKeyDown(KeyCode.LeftArrow)) { // LE JOUEUR VA À GAUCHE
+                StartCoroutine(TurnAnimation(1f));
                 if (transform.position == rightLane.transform.position) { // si on est à droite
                     transform.position = middleLane.transform.position;
                 } else if (transform.position == middleLane.transform.position) { // si on est au milieu
                     transform.position = leftLane.transform.position;
                 } else if (transform.position == leftLane.transform.position) { //si on est déjà à gauche
-                    //bruit de blocage + crash
+                    //bruit de blocage
                     StartCoroutine(carSprite.GetComponent<CarSprite>().LoseLife());
-                    //Debug.Log("Nombre de vie : " + carSprite.GetComponent<CarSprite>().lives);
                 }
             }
         }
 
+    }
+
+    public IEnumerator TurnAnimation(float angle) {
+        carSprite.transform.rotation = Quaternion.Euler(new Vector3(0, 0, 180 + (angle * turnSize - angle * turnSize/2)));
+        yield return new WaitForSeconds(.1f);
+        carSprite.transform.rotation = Quaternion.Euler(new Vector3(0, 0, 180 + angle));
+        yield return new WaitForSeconds(.1f);
+        carSprite.transform.rotation = Quaternion.Euler(new Vector3(0, 0, 180+(angle * turnSize - angle * turnSize/2)));
+        yield return new WaitForSeconds(.1f);
+        carSprite.transform.rotation = Quaternion.Euler(new Vector3(0, 0, 180));
     }
     
 

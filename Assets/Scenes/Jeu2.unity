@@ -232,8 +232,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1dd8cc7292b28c04a97c0312de92c727, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnLocations: []
+  Locations: []
   prefabIngot: {fileID: 8725765011111111777, guid: 7316d3a1ff09d814fa28aaa255e8d0de,
     type: 3}
+  spawnTime: 1
 --- !u!4 &58767007
 Transform:
   m_ObjectHideFlags: 0
@@ -1429,7 +1432,7 @@ GameObject:
   - component: {fileID: 1422225979}
   - component: {fileID: 1422225978}
   m_Layer: 0
-  m_Name: MainObject - Game2
+  m_Name: BraquageController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1447,6 +1450,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f227a8430a2ded438d7c3c25769b143, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  needLingots: 50
+  startTime: 60
 --- !u!4 &1422225979
 Transform:
   m_ObjectHideFlags: 0

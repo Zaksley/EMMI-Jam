@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class IngotCollision : MonoBehaviour
 {
@@ -32,7 +33,7 @@ public class IngotCollision : MonoBehaviour
         {
             spawner.GetComponent<SpawnIngot>().addLocation(index); 
             controller.GetComponent<BraquageController>().getLingot(valueLingot);
-            controller.GetComponent<BraquageController>().addTime(timeLingot);
+            //controller.GetComponent<BraquageController>().addTime(timeLingot);
             ShowMoney(); 
             Destroy(gameObject);
         }
@@ -41,6 +42,6 @@ public class IngotCollision : MonoBehaviour
     private void ShowMoney()
     {
         GameObject prefab = Instantiate(prefabText, player.transform.position + offSet, Quaternion.identity);
-        prefab.GetComponentInChildren<TextMesh>().text = "$10 000";
+        prefab.GetComponentInChildren<TextMeshPro>().text = "$20 000";
     }
 }

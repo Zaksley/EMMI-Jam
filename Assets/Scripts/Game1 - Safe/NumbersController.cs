@@ -29,6 +29,8 @@ public class NumbersController : MonoBehaviour
     private int nbFlash = 0;
     [SerializeField] private int MaxNbFlash = 3; 
     public bool win = false;
+    private GameObject background;
+    [SerializeField] private Sprite background_win; 
 
     private gameManager manager;
 
@@ -42,6 +44,7 @@ public class NumbersController : MonoBehaviour
         Text2 = Number2.GetComponentInChildren<TextMeshPro>(); 
         Text3 = Number3.GetComponentInChildren<TextMeshPro>(); 
         Text4 = Number4.GetComponentInChildren<TextMeshPro>(); 
+        background = GameObject.Find("Background"); 
 
         Texts = new List<TMP_Text>() {Text1, Text2, Text3, Text4}; 
 
@@ -131,6 +134,8 @@ public class NumbersController : MonoBehaviour
         Text2.text = "O";  
         Text3.text = "K";  
         Text4.text = "";  
+
+        background.GetComponent<SpriteRenderer>().sprite = background_win; 
     }
 
     private void disableText()
@@ -151,8 +156,9 @@ public class NumbersController : MonoBehaviour
                 if (nbFlash == 0)
                 {
                     if (win)
+                    {
                         manager.victory();
-                        Debug.Log("Leave game");
+                    }
 
                     // Delete old code
                     while(turn > 0)

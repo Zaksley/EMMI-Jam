@@ -45,9 +45,18 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: background
+    uniqueID: 3922261201
+    locked: 0
   - name: shelf
     uniqueID: 824779475
     locked: 0
   - name: ingot
     uniqueID: 373556127
+    locked: 0
+  - name: digicode
+    uniqueID: 4291648309
+    locked: 0
+  - name: numbers
+    uniqueID: 3126899353
     locked: 0

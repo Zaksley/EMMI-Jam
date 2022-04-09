@@ -12,6 +12,7 @@ public class CarSprite : MonoBehaviour
     public bool isBlinking = false;
     SpriteRenderer carSprite;
     Color defaultColor;
+    public GameObject mainCamera;
 
 
     void Start() {
@@ -56,6 +57,7 @@ public class CarSprite : MonoBehaviour
         if (justLost == false) {
             lives--;
             justLost = true;
+            StartCoroutine(mainCamera.GetComponent<CameraShake>().Shake(1f, 0.1f));
             isBlinking = true;
             yield return new WaitForSeconds(0.25f);
             isBlinking = true;

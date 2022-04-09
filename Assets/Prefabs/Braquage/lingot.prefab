@@ -124,4 +124,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   valueLingot: 1
   timeLingot: 5
+  prefabText: {fileID: 4482032916680382827, guid: 588958e36af53c6418a771c3149686a1,
+    type: 3}
+  player: {fileID: 0}
   index: 0
+  offSet: {x: 0, y: 10, z: 0}

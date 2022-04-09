@@ -12,9 +12,6 @@ EditorBuildSettings:
     path: Assets/Scenes/End.unity
     guid: 7b3449839082d3944a45bdd2489430d1
   - enabled: 1
-    path: Assets/Scenes/Jeu1.unity
-    guid: 1d6e639201b5a344d9809bdbd7387737
-  - enabled: 1
     path: Assets/Scenes/Jeu2.unity
     guid: 6cb32022b5c2c254face89c37f8fbb91
   - enabled: 1
@@ -44,4 +41,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Transition8.unity
     guid: 235c8a1075a32834d86752e394811db3
+  - enabled: 1
+    path: Assets/Scenes/safe.unity
+    guid: cd2499ca6b6feb24eb0c137d213ca702
   m_configObjects: {}

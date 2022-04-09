@@ -5,9 +5,11 @@ using UnityEngine;
 public class HandleNumbers : MonoBehaviour
 {
 
-    float sizeBox = 1.1f;
+    [SerializeField] private float sizeBox = 1.1f;
+    [SerializeField] private float boxOffsetX = -2f;
+    [SerializeField] private float boxOffsetY = 2f;
 
-    private List<BoxCollider2D> boxes; 
+    private List<BoxCollider2D> boxes = new List<BoxCollider2D>(); 
 
     private NumbersController controller; 
 
@@ -27,7 +29,7 @@ public class HandleNumbers : MonoBehaviour
             for(int j=-1; j<2; j++)
             {
                 BoxCollider2D box = gameObject.AddComponent<BoxCollider2D>(); 
-                box.offset = new Vector2(j*sizeBox, -i*sizeBox); 
+                box.offset = new Vector2(j*(sizeBox+0.2f) + boxOffsetX, -i*(sizeBox+0.085f) + boxOffsetY); 
                 box.size = new Vector2(sizeBox, sizeBox); 
 
                 boxes.Add(box);
@@ -63,16 +65,4 @@ public class HandleNumbers : MonoBehaviour
         }
  
     }
-
-    /* DEBUG
-    private void OnDrawGizmos() 
-    {
-        Gizmos.color = Color.green; 
-
-        for(int i=0; i<boxes.Count; i++)
-        {
-            Gizmos.DrawCube(boxes[i].transform.position, new Vector3(sizeBox, sizeBox, 0f));
-        }
-    }*/
-    
 }

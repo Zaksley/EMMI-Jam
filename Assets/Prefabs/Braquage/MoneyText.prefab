@@ -63,22 +63,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: FloatingText
       objectReference: {fileID: 0}
-    - target: {fileID: 3859490825296569417, guid: d936abb02314a984bb71cae8d26da8fe,
-        type: 3}
-      propertyPath: m_Font
-      value: 
-      objectReference: {fileID: 12800000, guid: d457fbbdb7b5deb4d8c218f35295a857,
-        type: 3}
-    - target: {fileID: 3859490825296569417, guid: d936abb02314a984bb71cae8d26da8fe,
-        type: 3}
-      propertyPath: m_Anchor
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 3859490825296569417, guid: d936abb02314a984bb71cae8d26da8fe,
-        type: 3}
-      propertyPath: m_Alignment
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3859490825296569462, guid: d936abb02314a984bb71cae8d26da8fe,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -93,11 +77,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3859490825296569463, guid: d936abb02314a984bb71cae8d26da8fe,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3859490825296569463, guid: d936abb02314a984bb71cae8d26da8fe,
         type: 3}
@@ -128,16 +107,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.y
       value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 3859490825296569463, guid: d936abb02314a984bb71cae8d26da8fe,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3859490825296569463, guid: d936abb02314a984bb71cae8d26da8fe,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3859490825296569463, guid: d936abb02314a984bb71cae8d26da8fe,
         type: 3}
@@ -184,23 +153,7 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -1.9633019
       objectReference: {fileID: 0}
-    - target: {fileID: 3859490825296569463, guid: d936abb02314a984bb71cae8d26da8fe,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3859490825296569463, guid: d936abb02314a984bb71cae8d26da8fe,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3859490825296569463, guid: d936abb02314a984bb71cae8d26da8fe,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 3859490825296569460, guid: d936abb02314a984bb71cae8d26da8fe, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d936abb02314a984bb71cae8d26da8fe, type: 3}
 --- !u!224 &845774331229484435 stripped
 RectTransform:

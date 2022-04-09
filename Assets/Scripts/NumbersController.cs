@@ -28,6 +28,7 @@ public class NumbersController : MonoBehaviour
     private bool flashIndicator = false; 
     private int nbFlash = 0;
     [SerializeField] private int MaxNbFlash = 3; 
+    private bool win = false;
 
     // Start is called before the first frame update
     void Start()
@@ -56,12 +57,11 @@ public class NumbersController : MonoBehaviour
                 enableText(); 
             }
         }
-
     }
     
     public void UpdateText(int number) 
     {
-        if (turn < maxNumbers) 
+        if (turn < maxNumbers && nbFlash == 0) 
         {
             string snumber = number.ToString(); 
             Texts[turn].text = snumber; 
@@ -73,7 +73,7 @@ public class NumbersController : MonoBehaviour
 
     public void DeleteText()
     {
-        if (turn > 0)
+        if (turn > 0 && nbFlash == 0)
         {
             turn--;
             Texts[turn].text = "*"; 
@@ -99,15 +99,24 @@ public class NumbersController : MonoBehaviour
         if (string.Equals(testCode, code))
         {
             // Change scene
-            Debug.Log("Je me barre au niveau 2");
+            printWin();
+            flash();
+            win = true;
         }
         else 
         {
             // TODO: Display error 
             // Sound erreur 
-            errorCode();
-
+            flash();
         }
+    }
+
+    private void printWin()
+    {
+        Text1.text = "";  
+        Text2.text = "O";  
+        Text3.text = "K";  
+        Text4.text = "";  
     }
 
     private void disableText()
@@ -120,7 +129,21 @@ public class NumbersController : MonoBehaviour
             currentTime = 0f; 
             flashIndicator = false; 
             setText(true); 
-            if (nbFlash > 0) nbFlash--; 
+            if (nbFlash > 0) 
+            {
+                nbFlash--;
+
+                // End flash 
+                if (nbFlash == 0)
+                {
+                    if (win)
+                        Debug.Log("Leave game");
+
+                    // Delete old code
+                    while(turn > 0)
+                        DeleteText();
+                }
+            }
         }
     }
 
@@ -145,14 +168,9 @@ public class NumbersController : MonoBehaviour
         }
     }
 
-    private void errorCode()
-    {
-        nbFlash = MaxNbFlash;
-        flash(); 
-    }
-
     private void flash()
     {
+        nbFlash = MaxNbFlash;
         setText(false);
         currentTime = flashTime;
         flashIndicator = true; 

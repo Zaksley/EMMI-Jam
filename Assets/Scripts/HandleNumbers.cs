@@ -64,12 +64,7 @@ public class HandleNumbers : MonoBehaviour
  
     }
 
-    private void OnMouseDown() {
-        
-        //controller.UpdateText()
-    }
-
-    /*
+    /* DEBUG
     private void OnDrawGizmos() 
     {
         Gizmos.color = Color.green; 
@@ -78,8 +73,6 @@ public class HandleNumbers : MonoBehaviour
         {
             Gizmos.DrawCube(boxes[i].transform.position, new Vector3(sizeBox, sizeBox, 0f));
         }
-
-
-    }
-    */
+    }*/
+    
 }

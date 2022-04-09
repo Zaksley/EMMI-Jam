@@ -15,11 +15,11 @@ public class CameraShake : MonoBehaviour
             float x = Random.Range(-1f, 1f) * magnitude;
             float y = Random.Range(-1f, 1f) * magnitude;
 
-            transform.localPosition = new Vector3(x, y + middleLane.transform.position.y + 3, -10);
+            transform.localPosition = new Vector3(x, y + middleLane.transform.position.y + 2, -10);
             elapsed += Time.deltaTime;
 
             yield return null;
         }
-        transform.localPosition = new Vector3(0, middleLane.transform.position.y + 3, -10);
+        transform.localPosition = new Vector3(0, middleLane.transform.position.y + 2, -10);
     }
 }

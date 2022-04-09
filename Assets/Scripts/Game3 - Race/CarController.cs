@@ -8,9 +8,10 @@ public class CarController : MonoBehaviour
     public GameObject middleLane;
     public GameObject leftLane;
     private GameObject mainCamera;
-    public int speed;
+    public float speed;
     public GameObject carSprite;
     public float turnSize;
+    public float acceleration;
 
 
     void Start()
@@ -26,7 +27,8 @@ public class CarController : MonoBehaviour
         rightLane.transform.position = new Vector3(rightLane.transform.position.x, transform.position.y, rightLane.transform.position.z);
         middleLane.transform.position = new Vector3(middleLane.transform.position.x, transform.position.y, middleLane.transform.position.z);
         leftLane.transform.position = new Vector3(leftLane.transform.position.x, transform.position.y, leftLane.transform.position.z);
-        mainCamera.transform.position = new Vector3(0, middleLane.transform.position.y + 3, -10);
+        mainCamera.transform.position = new Vector3(0, middleLane.transform.position.y + 2, -10);
+        speed = speed * acceleration;
 
         //MOVEMENT
         if(transform.position.x == carSprite.transform.position.x) {

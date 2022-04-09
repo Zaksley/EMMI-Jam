@@ -23,6 +23,12 @@ public class NumbersController : MonoBehaviour
     private int turn; 
     [SerializeField] private int maxNumbers = 4; 
 
+    private float currentTime = 0f; 
+    [SerializeField] private float flashTime = 0.05f; 
+    private bool flashIndicator = false; 
+    private int nbFlash = 0;
+    [SerializeField] private int MaxNbFlash = 3; 
+
     // Start is called before the first frame update
     void Start()
     {   
@@ -37,6 +43,21 @@ public class NumbersController : MonoBehaviour
         Texts = new List<TMP_Text>() {Text1, Text2, Text3, Text4}; 
     }
 
+    void Update() 
+    {
+        if (nbFlash > 0)
+        {
+            if(flashIndicator)
+            {
+                disableText();
+            }
+            else
+            {
+                enableText(); 
+            }
+        }
+
+    }
     
     public void UpdateText(int number) 
     {
@@ -84,6 +105,56 @@ public class NumbersController : MonoBehaviour
         {
             // TODO: Display error 
             // Sound erreur 
+            errorCode();
+
         }
+    }
+
+    private void disableText()
+    {
+        currentTime -= 1 * Time.deltaTime; 
+
+        // End disable
+        if (currentTime <= 0f)
+        {
+            currentTime = 0f; 
+            flashIndicator = false; 
+            setText(true); 
+            if (nbFlash > 0) nbFlash--; 
+        }
+    }
+
+    private void enableText()
+    {
+        currentTime += 1 * Time.deltaTime;
+
+        // End enable
+        if (currentTime >= flashTime)
+        {
+            currentTime = flashTime; 
+            flashIndicator = true; 
+            setText(false);
+        }
+    }
+
+    private void setText(bool enableText)
+    {
+        for(int i=0; i<Texts.Count; i++)
+        {
+            Texts[i].GetComponentInParent<MeshRenderer>().enabled = enableText; 
+        }
+    }
+
+    private void errorCode()
+    {
+        nbFlash = MaxNbFlash;
+        flash(); 
+    }
+
+    private void flash()
+    {
+        setText(false);
+        currentTime = flashTime;
+        flashIndicator = true; 
     }
 }

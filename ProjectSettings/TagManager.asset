@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - SpawnLocation
+  - Ingot
+  - Obstacle
+  - Win
   layers:
   - Default
   - TransparentFX
@@ -40,4 +44,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: shelf
+    uniqueID: 824779475
+    locked: 0
+  - name: ingot
+    uniqueID: 373556127
     locked: 0

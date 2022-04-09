@@ -11,6 +11,12 @@ public class HandleNumbers : MonoBehaviour
 
     private List<BoxCollider2D> boxes = new List<BoxCollider2D>(); 
 
+    [SerializeField] private Sprite[] digicodes; 
+    private int digicodeValidate = 10;
+    private int digicodeDelete = 11; 
+    [SerializeField] private float durationChangeSprite = 0.5f;
+    private float changeSprite = 0f;  
+
     private NumbersController controller; 
 
     [SerializeField] private BoxCollider2D validate;
@@ -30,7 +36,7 @@ public class HandleNumbers : MonoBehaviour
             {
                 BoxCollider2D box = gameObject.AddComponent<BoxCollider2D>(); 
                 box.offset = new Vector2(j*(sizeBox+0.2f) + boxOffsetX, -i*(sizeBox+0.085f) + boxOffsetY); 
-                box.size = new Vector2(sizeBox, sizeBox); 
+                box.size = new Vector2(sizeBox+0.1f, sizeBox); 
 
                 boxes.Add(box);
                 count++; 
@@ -51,18 +57,36 @@ public class HandleNumbers : MonoBehaviour
                 if (GameObject.ReferenceEquals(boxes[i], cubeHit.collider))
                 {
                     controller.UpdateText(i+1);
+                    ChangeSprite(i+1);
                 }
             }
 
             if (GameObject.ReferenceEquals(validate, cubeHit.collider))
             {
                 controller.checkCode(); 
+                ChangeSprite(digicodeValidate);
             }
             else if (GameObject.ReferenceEquals(delete, cubeHit.collider))
             {
                 controller.DeleteText();
+                ChangeSprite(digicodeDelete); 
             }
         }
- 
+
+        if (changeSprite <= 0 && (GetComponent<SpriteRenderer>().sprite != digicodes[0]))
+        {
+            GetComponent<SpriteRenderer>().sprite = digicodes[0]; 
+        }
+        else 
+        {
+            changeSprite -= 1 * Time.deltaTime; 
+        }
+
+    }
+
+    void ChangeSprite(int index)
+    {
+        GetComponent<SpriteRenderer>().sprite = digicodes[index];
+        changeSprite = durationChangeSprite; 
     }
 }

@@ -18,7 +18,7 @@ public class BraquageController : MonoBehaviour
 
     void Start()
     {
-        // manager = GameObject.Find("dontDestroy").gameObject.GetComponent<dontDestroy>().save.GetComponent<gameManager>();
+        //manager = GameObject.Find("dontDestroy").gameObject.GetComponent<dontDestroy>().save.GetComponent<gameManager>();
 
         currentTime = startTime;
         needLingots = 10;
@@ -28,7 +28,6 @@ void Update()
     {
         currentTime -= 1 * Time.deltaTime; 
 
-        // Loose
         if (currentTime <= 0)
         {
             currentTime = 0; 
@@ -47,9 +46,8 @@ void Update()
         nbLingots += value;
         if (nbLingots >= needLingots)
         {
-            //manager.win();
+            //manager.victory();
         }
-
     }
 
     public void addTime(float timeValue)

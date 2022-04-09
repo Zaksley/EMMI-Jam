@@ -45,14 +45,11 @@ public class SpawnIngot : MonoBehaviour
             {
                 if (ReferenceEquals(Locations[spawnIndex], spawnLocations[i]))
                 {
-                    Debug.Log("spawn");
                     CreateIngot(i);
                     return;
                 }
             }
         }
-
-        Debug.Log("can't spawn");
         
         return;
     }

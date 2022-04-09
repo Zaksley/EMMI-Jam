@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI; 
 public class BraquageController : MonoBehaviour
 {
 
@@ -11,21 +11,22 @@ public class BraquageController : MonoBehaviour
 
     [SerializeField] private float startTime = 60f; 
     private float currentTime; 
-    private float displayTime;
+
+    [SerializeField]  private Image fillTime;
+    [SerializeField]  private Image fillLingot;
+
 
     void Start()
     {
         // manager = GameObject.Find("dontDestroy").gameObject.GetComponent<dontDestroy>().save.GetComponent<gameManager>();
 
         currentTime = startTime;
+        needLingots = 10;
     }
 
 void Update()
     {
         currentTime -= 1 * Time.deltaTime; 
-
-        displayTime = currentTime;
-        //countdown.text = displayTime.ToString("N1"); 
 
         // Loose
         if (currentTime <= 0)
@@ -33,7 +34,13 @@ void Update()
             currentTime = 0; 
             //manager.defeat();
         }
-    }
+
+        double time = (float) currentTime / (float) startTime;
+        double lingots = (float) nbLingots / (float) needLingots; 
+
+        fillTime.fillAmount = (float) time; 
+        fillLingot.fillAmount = (float) lingots; 
+    }   
 
     public void getLingot(int value)
     {
@@ -47,7 +54,7 @@ void Update()
 
     public void addTime(float timeValue)
     {
-        currentTime += timeValue;
-
+        float calculatedTime = currentTime + timeValue; 
+        currentTime = (calculatedTime > startTime) ? startTime : calculatedTime; 
     }
 }

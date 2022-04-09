@@ -9,7 +9,7 @@ public class IngotCollision : MonoBehaviour
     private GameObject controller;
 
     [SerializeField] private int valueLingot = 1;
-    [SerializeField] private float timeLingot = 5f; 
+    [SerializeField] private float timeLingot = 5.0f; 
     public int index; 
 
     void Start()

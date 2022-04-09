@@ -51,23 +51,27 @@ public class gameManager : MonoBehaviour
             SceneManager.LoadScene("Transition1");
         }
 
-        if (numberGame == 2)
-        {
-            numberTransition = 5;
-            SceneManager.LoadScene("Transition5");
-        }
-
-        if (numberGame == 3)
-        {
-            if (lastTransition == 1)
+        else{
+            if (numberGame == 2)
             {
-                numberTransition = 3;
-                SceneManager.LoadScene("Transition3");
+                numberTransition = 5;
+                SceneManager.LoadScene("Transition5");
             }
-            if (lastTransition == 6)
-            {
-                numberTransition = 7;
-                SceneManager.LoadScene("Transition7");
+
+            else{
+                if (numberGame == 3)
+                {
+                    if (lastTransition == 1)
+                    {
+                        numberTransition = 3;
+                        SceneManager.LoadScene("Transition3");
+                    }
+                    if (lastTransition == 6)
+                    {
+                        numberTransition = 7;
+                        SceneManager.LoadScene("Transition7");
+                    }
+                }
             }
         }
     }
@@ -81,68 +85,88 @@ public class gameManager : MonoBehaviour
             SceneManager.LoadScene("safe");
         }
 
-        if (numberTransition == 1)
-        {
-            lastTransition = 1;
-            numberGame = 3;
-            SceneManager.LoadScene("Jeu3");
+        else{
+            if (numberTransition == 1)
+            {
+                lastTransition = 1;
+                numberGame = 3;
+                SceneManager.LoadScene("Jeu3");
+            }
+
+            else{
+                if (numberTransition == 2)
+                {
+                    lastTransition = 2;
+                    numberGame = 2;
+                    SceneManager.LoadScene("Jeu2");
+                }
+
+                else{
+                    if (numberTransition == 3)
+                    {
+                        lastTransition = 3;
+                        numberTransition = 100;
+                        SceneManager.LoadScene("End");
+                    }
+
+                    else{
+                        if (numberTransition == 4)
+                        {
+                            lastTransition = 4;
+                            numberTransition = 100;
+                            SceneManager.LoadScene("End");
+                        }
+
+                        else{
+                            if (numberTransition == 5)
+                            {
+                                lastTransition = 5;
+                                numberTransition = 100;
+                                SceneManager.LoadScene("End");
+                            }
+
+                            else{
+                                if (numberTransition == 6)
+                                {
+                                    lastTransition = 6;
+                                    numberGame = 3;
+                                    SceneManager.LoadScene("Jeu3");
+                                }
+
+                                else{
+                                    if (numberTransition == 7)
+                                    {
+                                        lastTransition = 7;
+                                        numberTransition = 100;
+                                        SceneManager.LoadScene("End");
+                                    }
+
+                                    else{
+                                        if (numberTransition == 8)
+                                        {
+                                            lastTransition = 8;
+                                            numberTransition = 100;
+                                            SceneManager.LoadScene("End");
+                                        }
+
+                                        else{
+                                            if (numberTransition == 100)
+                                            {
+                                                lastTransition = -1;
+                                                numberTransition = 0;
+                                                Debug.Log("THe End");
+                                                SceneManager.LoadScene("Beginning");
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
 
-        if (numberTransition == 2)
-        {
-            lastTransition = 2;
-            numberGame = 2;
-            SceneManager.LoadScene("Jeu2");
-        }
-
-        if (numberTransition == 3)
-        {
-            lastTransition = 3;
-            numberTransition = 100;
-            SceneManager.LoadScene("End");
-        }
-
-        if (numberTransition == 4)
-        {
-            lastTransition = 4;
-            numberTransition = 100;
-            SceneManager.LoadScene("End");
-        }
-
-        if (numberTransition == 5)
-        {
-            lastTransition = 5;
-            numberTransition = 100;
-            SceneManager.LoadScene("End");
-        }
-
-        if (numberTransition == 6)
-        {
-            lastTransition = 6;
-            numberGame = 3;
-            SceneManager.LoadScene("Jeu3");
-        }
-        
-        if (numberTransition == 7)
-        {
-            lastTransition = 7;
-            numberTransition = 100;
-            SceneManager.LoadScene("End");
-        }
-
-        if (numberTransition == 8)
-        {
-            lastTransition = 8;
-            numberTransition = 100;
-            SceneManager.LoadScene("End");
-        }
-
-        if (numberTransition == 100)
-        {
-            lastTransition = -1;
-            numberTransition = 0;
-            SceneManager.LoadScene("Beginning");
-        }
     }
 
 }

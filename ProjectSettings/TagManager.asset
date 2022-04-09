@@ -6,6 +6,8 @@ TagManager:
   tags:
   - SpawnLocation
   - Ingot
+  - Obstacle
+  - Win
   layers:
   - Default
   - TransparentFX

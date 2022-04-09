@@ -9,7 +9,6 @@ public class fauxCode : MonoBehaviour
     void Start()
     {
         manager = GameObject.Find("dontDestroy").gameObject.GetComponent<dontDestroy>().save.GetComponent<gameManager>();
-        Debug.Log(manager);
     }
 
     // Update is called once per frame

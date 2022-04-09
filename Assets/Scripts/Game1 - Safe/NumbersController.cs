@@ -30,6 +30,8 @@ public class NumbersController : MonoBehaviour
     [SerializeField] private int MaxNbFlash = 3; 
     public bool win = false;
 
+    private gameManager manager;
+
     // Start is called before the first frame update
     void Start()
     {   
@@ -42,6 +44,8 @@ public class NumbersController : MonoBehaviour
         Text4 = Number4.GetComponentInChildren<TextMeshPro>(); 
 
         Texts = new List<TMP_Text>() {Text1, Text2, Text3, Text4}; 
+
+        manager = GameObject.Find("dontDestroy").gameObject.GetComponent<dontDestroy>().save.GetComponent<gameManager>();
     }
 
     void Update() 
@@ -56,6 +60,16 @@ public class NumbersController : MonoBehaviour
             {
                 enableText(); 
             }
+        }
+
+        if (Input.GetKey(KeyCode.P))
+        {
+            manager.victory();
+        }
+
+        if (Input.GetKey(KeyCode.M))
+        {
+            manager.defeat();
         }
     }
     
@@ -137,6 +151,7 @@ public class NumbersController : MonoBehaviour
                 if (nbFlash == 0)
                 {
                     if (win)
+                        manager.victory();
                         Debug.Log("Leave game");
 
                     // Delete old code

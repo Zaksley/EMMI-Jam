@@ -78,7 +78,7 @@ public class gameManager : MonoBehaviour
         {
             lastTransition = 0;
             numberGame = 1;
-            SceneManager.LoadScene("Jeu1");
+            SceneManager.LoadScene("safe");
         }
 
         if (numberTransition == 1)

@@ -12,11 +12,13 @@ public class CountDownTimer : MonoBehaviour
     [SerializeField] private NumbersController numbers;
 
     [SerializeField] TMP_Text countdown;
+    private gameManager manager;
 
     void Start()
     {
         currentTime = startingTime; 
         displayTime = currentTime; 
+        manager = GameObject.Find("dontDestroy").gameObject.GetComponent<dontDestroy>().save.GetComponent<gameManager>();
     }
 
     // Update is called once per frame
@@ -35,6 +37,10 @@ public class CountDownTimer : MonoBehaviour
 
         // Loose
         if (currentTime <= 0)
+        {
             currentTime = 0; 
+            manager.defeat();
+        }
+           
     }
 }

@@ -14,6 +14,8 @@ public class BraquageController : MonoBehaviour
 
     [SerializeField]  private Image fillTime;
     [SerializeField]  private Image fillLingot;
+    public AudioSource audioSource;
+    public AudioClip lingot;
 
 
     void Start()

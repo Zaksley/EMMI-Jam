@@ -16,11 +16,15 @@ public class PursuitController : MonoBehaviour
     private Vector3 translationUp; 
     private Vector3 translationSide; 
 
+    private gameManager manager; 
+
     // Start is called before the first frame update
     void Start()
     {
         translationUp = new Vector3(0, moveY, 0); 
         currentTimeMove = 0f; 
+
+        manager = GameObject.Find("dontDestroy").gameObject.GetComponent<dontDestroy>().save.GetComponent<gameManager>();
     }
 
     // Update is called once per frame
@@ -72,10 +76,16 @@ public class PursuitController : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other) 
     {
-        
-        if (other.gameObject.CompareTag("Car"))
+        if (other.gameObject.CompareTag("Car") || other.gameObject.CompareTag("Tree"))
         {
             // Death
+            Debug.Log("death");
+            manager.defeat();
+        }
+        else if (other.gameObject.CompareTag("Win"))
+        {
+            Debug.Log("win");
+            manager.victory(); 
         }
     }
 }

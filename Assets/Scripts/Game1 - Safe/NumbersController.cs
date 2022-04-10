@@ -10,7 +10,7 @@ public class NumbersController : MonoBehaviour
     public GameObject Number2; 
     public GameObject Number3; 
     public GameObject Number4; 
-
+  
     private TMP_Text Text1; 
     private TMP_Text Text2;
     private TMP_Text Text3; 
@@ -31,7 +31,7 @@ public class NumbersController : MonoBehaviour
     public bool win = false;
     private GameObject background;
     [SerializeField] private Sprite background_win; 
-
+    public AudioClip digitSound; 
     private gameManager manager;
 
     // Start is called before the first frame update
@@ -111,7 +111,7 @@ public class NumbersController : MonoBehaviour
             testCode = testCode.Remove(testCode.Length - 1);
     }
 
-    public void checkCode()
+    public bool checkCode()
     {
         if (string.Equals(testCode, code))
         {
@@ -119,12 +119,14 @@ public class NumbersController : MonoBehaviour
             printWin();
             flash();
             win = true;
+            return true;
         }
         else 
         {
             // TODO: Display error 
             // Sound erreur 
             flash();
+            return false;
         }
     }
 

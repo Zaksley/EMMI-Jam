@@ -8,6 +8,10 @@ TagManager:
   - Ingot
   - Obstacle
   - Win
+  - downArrow
+  - leftArrow
+  - rightArrow
+  - upArrow
   layers:
   - Default
   - TransparentFX

@@ -13,6 +13,8 @@ public class detector : MonoBehaviour
     int nbArrow = -1;
     Collider2D info;
     private gameManager manager;
+
+    public Sprite[] circleSprites;
     void Start()
     {
         numberOfRestantArrow = numberOfArrow;
@@ -28,8 +30,8 @@ public class detector : MonoBehaviour
             if (Input.GetKey(KeyCode.UpArrow) && nbArrow==0)
             {
                 Destroy(info.gameObject);
-                //numberOfRestantArrow-=1;
                 numberOfArrow-=1;
+                this.GetComponent<SpriteRenderer>().sprite = circleSprites[1];
             }
 
             if (Input.GetKey(KeyCode.RightArrow) && nbArrow==1)
@@ -37,7 +39,7 @@ public class detector : MonoBehaviour
                 Destroy(info.gameObject);
                 numberOfArrow-=1;
                 //numberOfRestantArrow-=1;
-                //this.GetComponent<SpriteRenderer>().sprite = keySprites[1];
+                this.GetComponent<SpriteRenderer>().sprite = circleSprites[2];
             }
 
             if (Input.GetKey(KeyCode.DownArrow) && nbArrow==2)
@@ -45,7 +47,7 @@ public class detector : MonoBehaviour
                 Destroy(info.gameObject);
                 numberOfArrow-=1;
                 //numberOfRestantArrow-=1;
-                //this.GetComponent<SpriteRenderer>().sprite = keySprites[2];
+                this.GetComponent<SpriteRenderer>().sprite = circleSprites[3];
             }
 
             if (Input.GetKey(KeyCode.LeftArrow) && nbArrow==3)
@@ -53,25 +55,17 @@ public class detector : MonoBehaviour
                 Destroy(info.gameObject);
                 numberOfArrow-=1;
                 //numberOfRestantArrow-=1;
-                //this.GetComponent<SpriteRenderer>().sprite = keySprites[3];
+                this.GetComponent<SpriteRenderer>().sprite = circleSprites[4];
             }
         }
 
-        if (numberOfRestantArrow == 0)
+        if (numberOfArrow == 0)
         {
-            if (numberOfArrow <= 0)
-            {
-                manager.victory();
-            }
-            else
-            {
-                manager.defeat();
-            }
-                
+                manager.victory();         
         }
 
-        Debug.Log(numberOfRestantArrow);
-        Debug.Log(numberOfArrow);
+        //Debug.Log(numberOfRestantArrow);
+        //Debug.Log(numberOfArrow);
         
     }
     void OnTriggerEnter2D(Collider2D infoCollision) // le type de la variable est Collision
@@ -101,5 +95,21 @@ public class detector : MonoBehaviour
     private void OnTriggerExit2D(Collider2D other) {
         numberOfRestantArrow-=1;
     }
+
+    public void theEnd(){
+        Debug.Log("defeat");
+        this.GetComponent<SpriteRenderer>().sprite = circleSprites[5];
+        //Time.timeScale = 0;
+        manager.Invoke("defeat", 2f);
+    }
     
+    public IEnumerator gameOver(){
+        Debug.Log("defeeeeat");
+        this.GetComponent<SpriteRenderer>().sprite = circleSprites[5];
+        //Time.timeScale = 0;
+        yield return new WaitForSeconds(2f);
+        Debug.Log("teststtt");
+        manager.defeat();
+        //yield return new WaitForSeconds(2f);
+    }
 }

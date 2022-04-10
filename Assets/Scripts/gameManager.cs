@@ -76,6 +76,7 @@ public class gameManager : MonoBehaviour
 
     public void defeat()
     {
+        Debug.Log("enter defeat");
         if (numberGame == 1)
         {
             numberTransition = 1;

@@ -16,6 +16,7 @@ public class PursuitController : MonoBehaviour
     private Vector3 translationUp; 
     private Vector3 translationSide; 
 
+    public Animator animator; 
     private gameManager manager; 
 
     // Start is called before the first frame update
@@ -40,6 +41,7 @@ public class PursuitController : MonoBehaviour
         {
             if (goUp == 1)
             {
+                animator.SetFloat("Speed", 1f);
                 Move(translationUp); 
                 currentTimeMove = timeMove; 
             }
@@ -51,7 +53,8 @@ public class PursuitController : MonoBehaviour
             }
         }
 
-
+        if (goUp == 1)   animator.SetFloat("Speed", 1f);
+        else             animator.SetFloat("Speed", 0);
 
 
     }
@@ -78,8 +81,6 @@ public class PursuitController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Car") || other.gameObject.CompareTag("Tree"))
         {
-            // Death
-            Debug.Log("death");
             manager.defeat();
         }
         else if (other.gameObject.CompareTag("Win"))

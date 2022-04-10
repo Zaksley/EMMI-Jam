@@ -29,6 +29,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         ProcessInputs(); 
+        MoveAnimation();
     }
     void FixedUpdate() 
     {
@@ -46,6 +47,15 @@ public class PlayerController : MonoBehaviour
             rb.velocity = new Vector2(moveDirection.x * moveSpeed, moveDirection.y * moveSpeed);
         }
         
+    }
+
+    public void MoveAnimation() {
+        if (moveDirection.x != 0 && moveDirection.y != 0) //is running
+        {
+            
+        } else { //is idle
+            rb.velocity = new Vector2(moveDirection.x * moveSpeed, moveDirection.y * moveSpeed);
+        }
     }
 
 }

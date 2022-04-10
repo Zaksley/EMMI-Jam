@@ -93,6 +93,8 @@ public class gameManager : MonoBehaviour
             else{
                 if (numberGame == 3)
                 {
+                    Debug.Log("transition");
+                    Debug.Log(lastTransition);
                     if (lastTransition == 10)
                     {
                         numberTransition = 3;
@@ -234,7 +236,7 @@ public class gameManager : MonoBehaviour
                                                 else{
                                                     if (numberTransition == 10)
                                                     {
-                                                        lastTransition = 9;
+                                                        lastTransition = 10;
                                                         numberGame = 3;
                                                         SceneManager.LoadScene("Jeu3");
                                                     }

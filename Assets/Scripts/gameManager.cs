@@ -62,8 +62,8 @@ public class gameManager : MonoBehaviour
             if (lastTransition == 9)
             {
                 Debug.Log("ouai");
-                numberTransition = 11;
-                SceneManager.LoadScene("Transition11");
+                numberTransition = 12;
+                SceneManager.LoadScene("Transition12");
             }
             if (lastTransition == 13)
             {

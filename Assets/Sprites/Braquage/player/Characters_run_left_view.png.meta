@@ -1,16 +1,16 @@
 fileFormatVersion: 2
-guid: ecaa0e38c5bee3544beac8d3530254c0
+guid: 2701678f187cc7241a6d7d226e3ef0da
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7102507021098877448
-    second: Characters_run_down_view_0
+      213: 1866956906357531225
+    second: Characters_run_left_view_0
   - first:
-      213: -7344406813486581406
-    second: Characters_run_down_view_1
+      213: 287253804163792376
+    second: Characters_run_left_view_1
   - first:
-      213: -8998728127516108868
-    second: Characters_run_down_view_2
+      213: 1310227561760764803
+    second: Characters_run_left_view_2
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -112,12 +112,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Characters_run_down_view_0
+      name: Characters_run_left_view_0
       rect:
         serializedVersion: 2
-        x: 7
-        y: 10
-        width: 65
+        x: 50
+        y: 100
+        width: 150
         height: 174
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -126,19 +126,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8fdfea8be73de6d90800000000000000
-      internalID: -7102507021098877448
+      spriteID: 952276e2a63c8e910800000000000000
+      internalID: 1866956906357531225
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Characters_run_down_view_1
+      name: Characters_run_left_view_1
       rect:
         serializedVersion: 2
-        x: 86
-        y: 10
-        width: 65
+        x: 350
+        y: 100
+        width: 150
         height: 174
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -147,19 +147,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2697c2c5aec631a90800000000000000
-      internalID: -7344406813486581406
+      spriteID: 8fdff8d10d78cf300800000000000000
+      internalID: 287253804163792376
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Characters_run_down_view_2
+      name: Characters_run_left_view_2
       rect:
         serializedVersion: 2
-        x: 165
-        y: 10
-        width: 65
+        x: 650
+        y: 100
+        width: 150
         height: 174
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -168,8 +168,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cb7161102781e1380800000000000000
-      internalID: -8998728127516108868
+      spriteID: 3833da9860dde2210800000000000000
+      internalID: 1310227561760764803
       vertices: []
       indices: 
       edges: []

@@ -8,7 +8,8 @@ public class SpawnCars : MonoBehaviour
     [SerializeField] private GameObject carRight;
     [SerializeField] private bool right;
     [SerializeField] private float time; 
-    [SerializeField] private float offTime; 
+    [SerializeField] private float offTimeDown; 
+    [SerializeField] private float offTimeUp; 
 
 
     private float elapsedTime = 0.0f; 
@@ -27,8 +28,7 @@ public class SpawnCars : MonoBehaviour
         if (elapsedTime >= timeLimit)
         {
             elapsedTime = 0;
-            timeLimit = time + Random.Range(-offTime, offTime);
-            Debug.Log(timeLimit);
+            timeLimit = time + Random.Range(-offTimeDown, offTimeUp);
 
             if (right)  SpawnRight(); 
             else        SpawnLeft(); 

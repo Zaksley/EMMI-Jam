@@ -8,6 +8,8 @@ public class IngotCollision : MonoBehaviour
     private new BoxCollider2D collider; 
     private GameObject spawner;
     private GameObject controller;
+    private AudioSource source;
+    public float volume=0.5f;
 
     [SerializeField] private int valueLingot = 1;
     // [SerializeField] private float timeLingot = 5.0f; 
@@ -16,17 +18,14 @@ public class IngotCollision : MonoBehaviour
     [SerializeField] private GameObject player; 
     public int index; 
     [SerializeField] private Vector3 offSet; 
-    public AudioSource audioSource;
-    public AudioClip earned;
-    public float volume=1f;
 
     void Start()
     {
         collider = GetComponent<BoxCollider2D>(); 
         spawner = GameObject.Find("IngotGenerator"); 
         controller = GameObject.Find("BraquageController"); 
+        source = controller.GetComponent<BraquageController>().audioSource; 
         player = GameObject.Find("Player"); 
-
         offSet = new Vector3(2.5f, 1.5f, 0);
     }
 
@@ -34,6 +33,7 @@ public class IngotCollision : MonoBehaviour
     {   
         if (other.gameObject.CompareTag("Player"))
         {
+            source.PlayOneShot(controller.GetComponent<BraquageController>().lingot, volume); 
             spawner.GetComponent<SpawnIngot>().addLocation(index); 
             controller.GetComponent<BraquageController>().getLingot(valueLingot);
             //controller.GetComponent<BraquageController>().addTime(timeLingot);

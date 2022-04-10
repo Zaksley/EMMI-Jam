@@ -24,6 +24,7 @@ public class CarSprite : MonoBehaviour
 
     public GameObject defeatScene;
     public GameObject blackScreen;
+    public GameObject copCar;
 
 
     void Start() {
@@ -112,8 +113,10 @@ public class CarSprite : MonoBehaviour
     }
 
     public IEnumerator Win() {
+        copCar.SetActive(false);
         audioSource.PlayOneShot(win, volume);
-        yield return new WaitForSeconds(1f);
+        defeatScene.SetActive(true);
+        yield return new WaitForSeconds(2f);
         manager.victory();
         yield return null;
     }

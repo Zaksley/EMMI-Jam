@@ -4990,6 +4990,7 @@ MonoBehaviour:
   - {fileID: 1535455568}
   defeatScene: {fileID: 1347647122}
   blackScreen: {fileID: 304705899}
+  copCar: {fileID: 967375147}
 --- !u!61 &1857011382
 BoxCollider2D:
   m_ObjectHideFlags: 0

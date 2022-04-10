@@ -23,7 +23,6 @@ public class CarSprite : MonoBehaviour
     public GameObject[] tire;
 
     public GameObject defeatScene;
-    public GameObject blackScreen;
     public GameObject copCar;
 
 

@@ -12,10 +12,12 @@ public class detector : MonoBehaviour
  
     int nbArrow = -1;
     Collider2D info;
+    private gameManager manager;
     void Start()
     {
         numberOfRestantArrow = numberOfArrow;
         Debug.Log(info);
+        manager = GameObject.Find("dontDestroy").gameObject.GetComponent<dontDestroy>().save.GetComponent<gameManager>();
     }
 
     // Update is called once per frame
@@ -59,11 +61,11 @@ public class detector : MonoBehaviour
         {
             if (numberOfArrow <= 0)
             {
-                Debug.Log("victoire");
+                manager.victory();
             }
             else
             {
-                Debug.Log("deafeat");
+                manager.defeat();
             }
                 
         }

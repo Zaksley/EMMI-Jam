@@ -30,6 +30,36 @@ EditorBuildSettings:
     path: Assets/Scenes/safe.unity
     guid: cd2499ca6b6feb24eb0c137d213ca702
   - enabled: 1
+    path: Assets/Scenes/Transition9.unity
+    guid: c303d633110b21946984829edf0a4590
+  - enabled: 1
+    path: Assets/Scenes/Transition10.unity
+    guid: 7e56a701121c64042a6845cfda10417a
+  - enabled: 1
+    path: Assets/Scenes/Transition11.unity
+    guid: 6db093911c7397c4aba132120e33d983
+  - enabled: 1
+    path: Assets/Scenes/Transition12.unity
+    guid: b10850e1cc1f88843bc2086ded373418
+  - enabled: 1
+    path: Assets/Scenes/Transition13.unity
+    guid: c130eafb7163f1e47803b6130fc4faa0
+  - enabled: 1
+    path: Assets/Scenes/Jeu4.unity
+    guid: cb628348a24403446806d476b3a8e1a7
+  - enabled: 1
+    path: Assets/Scenes/Transition14.unity
+    guid: 24ceade012961d74bb748a5d8a572deb
+  - enabled: 1
+    path: Assets/Scenes/Transition15.unity
+    guid: edc0826928c1c3e48b099bf35610b517
+  - enabled: 1
+    path: Assets/Scenes/Transition16.unity
+    guid: 1c6cbfd250c2691419dbcff5b8f7d9b7
+  - enabled: 1
+    path: Assets/Scenes/Game5.unity
+    guid: 2ea302d11b5491741a25f586c86b6803
+  - enabled: 1
     path: Assets/Scenes/Transition3.unity
     guid: 7cec7feae9b0ddd4295f96873a783499
   - enabled: 1

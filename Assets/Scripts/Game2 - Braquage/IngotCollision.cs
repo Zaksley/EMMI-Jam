@@ -10,7 +10,7 @@ public class IngotCollision : MonoBehaviour
     private GameObject controller;
 
     [SerializeField] private int valueLingot = 1;
-    [SerializeField] private float timeLingot = 5.0f; 
+    // [SerializeField] private float timeLingot = 5.0f; 
     
     [SerializeField] private GameObject prefabText; 
     [SerializeField] private GameObject player; 

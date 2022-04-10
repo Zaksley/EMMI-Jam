@@ -1193,6 +1193,11 @@ MonoBehaviour:
   carSprite: {fileID: 1857011378}
   turnSize: 20
   acceleration: 1.00005
+  audioSource: {fileID: 0}
+  left: {fileID: 0}
+  right: {fileID: 0}
+  crash: {fileID: 0}
+  volume: 1
 --- !u!1 &692646571 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7960453503672919774, guid: 4255e2255fa1dd84ea816e019968fb70,
@@ -4119,6 +4124,12 @@ MonoBehaviour:
   lives: 3
   justLost: 0
   isBlinking: 0
+  audioSource: {fileID: 0}
+  win: {fileID: 0}
+  loose: {fileID: 0}
+  crash: {fileID: 0}
+  carTouched: {fileID: 0}
+  volume: 0.5
   mainCamera: {fileID: 192922166}
   tire:
   - {fileID: 1150373684}
@@ -4451,7 +4462,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 1.1
   m_AngularDrag: 0.05
   m_GravityScale: 0.1
   m_Material: {fileID: 0}
@@ -4512,7 +4523,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2145391186}
   - component: {fileID: 2145391188}
-  - component: {fileID: 2145391187}
   m_Layer: 0
   m_Name: ROAD
   m_TagString: Untagged
@@ -4534,27 +4544,6 @@ Transform:
   m_Father: {fileID: 2102854994}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &2145391187
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2145391185}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0.1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!212 &2145391188
 SpriteRenderer:
   m_ObjectHideFlags: 0

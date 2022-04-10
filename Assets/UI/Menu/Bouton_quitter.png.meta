@@ -132,10 +132,10 @@ TextureImporter:
         serializedVersion: 2
         x: 36
         y: 63
-        width: 260
+        width: 299
         height: 76
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -148,57 +148,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bouton_quitter_1
-      rect:
-        serializedVersion: 2
-        x: 242
-        y: 63
-        width: 74
-        height: 76
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e386cc838077a23c0800000000000000
-      internalID: -4383560410095392706
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bouton_quitter_2
-      rect:
-        serializedVersion: 2
-        x: 262
-        y: 63
-        width: 73
-        height: 76
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: aa309bcc01f2d8a30800000000000000
-      internalID: 4219080175116682154
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Bouton_quitter_3
       rect:
         serializedVersion: 2
         x: 406
         y: 63
-        width: 260
+        width: 324
         height: 76
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -206,90 +164,6 @@ TextureImporter:
       bones: []
       spriteID: 8d2afc2a42762a060800000000000000
       internalID: 6963241380916208344
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bouton_quitter_4
-      rect:
-        serializedVersion: 2
-        x: 613
-        y: 63
-        width: 73
-        height: 76
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a9428f203a6c0c9f0800000000000000
-      internalID: -450141559305263974
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bouton_quitter_5
-      rect:
-        serializedVersion: 2
-        x: 632
-        y: 63
-        width: 73
-        height: 76
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 833454596f0f33570800000000000000
-      internalID: 8445358668106777400
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bouton_quitter_6
-      rect:
-        serializedVersion: 2
-        x: 649
-        y: 63
-        width: 67
-        height: 76
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 098435c514d58fc70800000000000000
-      internalID: 9005049990230526096
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bouton_quitter_7
-      rect:
-        serializedVersion: 2
-        x: 664
-        y: 63
-        width: 66
-        height: 76
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3cda45d830136ef50800000000000000
-      internalID: 6910264569572404675
       vertices: []
       indices: 
       edges: []

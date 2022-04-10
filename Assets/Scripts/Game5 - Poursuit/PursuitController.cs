@@ -73,9 +73,10 @@ public class PursuitController : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other) 
     {
         
-        if (other.gameObject.CompareTag("Car"))
+        if (other.gameObject.CompareTag("Car") || other.gameObject.CompareTag("Tree"))
         {
             // Death
+            Debug.Log("death");
         }
     }
 }

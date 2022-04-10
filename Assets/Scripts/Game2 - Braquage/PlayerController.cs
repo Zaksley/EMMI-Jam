@@ -50,11 +50,16 @@ public class PlayerController : MonoBehaviour
     }
 
     public void MoveAnimation() {
-        if (moveDirection.x != 0 && moveDirection.y != 0) //is running
+        if (moveDirection.x != 0 || moveDirection.y != 0) //is running
         {
-            
+            GetComponent<Animator>().SetBool("isRunning", true);
+            GetComponent<Animator>().SetFloat("RX", moveDirection.x);
+            GetComponent<Animator>().SetFloat("RY", moveDirection.y);
+            GetComponent<Animator>().SetFloat("IX", moveDirection.x);
+            GetComponent<Animator>().SetFloat("IY", moveDirection.y);
+
         } else { //is idle
-            rb.velocity = new Vector2(moveDirection.x * moveSpeed, moveDirection.y * moveSpeed);
+            GetComponent<Animator>().SetBool("isRunning", false);
         }
     }
 

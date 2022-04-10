@@ -9,7 +9,7 @@ public class BraquageController : MonoBehaviour
     private int nbLingots = 0;
     [SerializeField] int needLingots = 50;
 
-    [SerializeField] private float startTime = 60f; 
+    [SerializeField] private float startTime = 50f; 
     private float currentTime; 
 
     [SerializeField]  private Image fillTime;

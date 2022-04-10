@@ -26,15 +26,6 @@ public class SpawnIngot : MonoBehaviour
 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        /*
-        Debug.Log("Spawn loc" + spawnLocations.Length);
-        Debug.Log("loc" + Locations.Count);*/
-
-    }
-
     private void SelectSpawn()
     {
         if (Locations.Count > 0)

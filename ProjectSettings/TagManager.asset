@@ -12,6 +12,7 @@ TagManager:
   - leftArrow
   - rightArrow
   - upArrow
+  - Car
   layers:
   - Default
   - TransparentFX

@@ -61,3 +61,6 @@ MonoBehaviour:
   carLeft: {fileID: 6289431941440945553, guid: 9ab8f5c505e2a6a4dbc0d421404db23b, type: 3}
   carRight: {fileID: 8475369761636841754, guid: fb3ca5f8de337324695a326e94af8ee3,
     type: 3}
+  right: 1
+  time: 2
+  offTime: 0.4

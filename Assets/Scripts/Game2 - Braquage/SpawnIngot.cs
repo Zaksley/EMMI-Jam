@@ -8,7 +8,8 @@ public class SpawnIngot : MonoBehaviour
     public GameObject[] spawnLocations; 
     public List<GameObject> Locations;
     [SerializeField] private GameObject prefabIngot;
-    
+    [SerializeField] private GameObject prefabIngotAbovePlayer;
+
     [SerializeField] private float spawnTime;
 
     void Start()
@@ -48,7 +49,13 @@ public class SpawnIngot : MonoBehaviour
     private void CreateIngot(int index)
     {
         Vector3 position = spawnLocations[index].transform.position;
-        GameObject ingot = Instantiate(prefabIngot, position, Quaternion.identity);
+        GameObject ingot;
+        if (spawnLocations[index].GetComponent<GizmosSpawn>().abovePlayer) {
+            ingot = Instantiate(prefabIngotAbovePlayer, position, Quaternion.identity);
+        } else {
+            ingot = Instantiate(prefabIngot, position, Quaternion.identity);
+        } //alvina
+        //GameObject ingot = Instantiate(prefabIngot, position, Quaternion.identity);
         ingot.GetComponent<IngotCollision>().index = index;
 
         // Remove location from list

@@ -16,7 +16,6 @@ public class MoveCar : MonoBehaviour
     
     private void OnTriggerEnter2D(Collider2D other) 
     {
-        Debug.Log("in");
         if (other.gameObject.CompareTag("Death"))
         {
             Destroy(gameObject); 

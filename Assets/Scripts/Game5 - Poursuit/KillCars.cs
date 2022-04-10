@@ -13,14 +13,4 @@ public class KillCars : MonoBehaviour
             Destroy(other.gameObject); 
         }
     }
-/*
-    private void OnTriggerEnter2D(Collider2D other) 
-    {
-        Debug.Log("in");
-        if (other.gameObject.CompareTag("Car"))
-        {
-            Destroy(other.gameObject); 
-        }
-    }*/
-
 }

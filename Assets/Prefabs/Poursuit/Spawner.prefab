@@ -46,6 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radius: 0.1
   blue: 0
+  abovePlayer: 0
 --- !u!114 &6151698897839994237
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63,4 +64,11 @@ MonoBehaviour:
     type: 3}
   right: 1
   time: 2
-  offTime: 0.4
+  offTimeDown: 0
+  offTimeUp: 0
+  cars:
+  - {fileID: 21300000, guid: 4933539623c8e5349a5629c9baedf4db, type: 3}
+  - {fileID: 21300000, guid: d21ae71a63073cb4b89a2675d3aa3b8f, type: 3}
+  - {fileID: 21300000, guid: 899aabd86466aa841984fc48d5fae2fc, type: 3}
+  - {fileID: 21300000, guid: b73c0df8588de1440a1ce6855c7a3f05, type: 3}
+  - {fileID: 21300000, guid: 421f5db43fa0ccf41854cde72f9b6bc3, type: 3}

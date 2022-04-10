@@ -84,7 +84,6 @@ public class PursuitController : MonoBehaviour
         }
         else if (other.gameObject.CompareTag("Win"))
         {
-            Debug.Log("win");
             manager.victory(); 
         }
     }

@@ -11,6 +11,7 @@ public class SpawnCars : MonoBehaviour
     [SerializeField] private float offTimeDown; 
     [SerializeField] private float offTimeUp; 
 
+    [SerializeField] private Sprite[] cars; 
 
     private float elapsedTime = 0.0f; 
     private float timeLimit; 
@@ -38,11 +39,13 @@ public class SpawnCars : MonoBehaviour
     
     void SpawnRight()
     {
-        Instantiate(carRight, transform.position, Quaternion.identity); 
+        GameObject car = Instantiate(carRight, transform.position, Quaternion.identity); 
+        car.GetComponent<SpriteRenderer>().sprite = cars[Random.Range(0, cars.Length)];
     }
 
     void SpawnLeft()
     {
-        Instantiate(carLeft, transform.position, Quaternion.identity); 
+        GameObject car = Instantiate(carLeft, transform.position, Quaternion.identity); 
+        car.GetComponent<SpriteRenderer>().sprite = cars[Random.Range(0, cars.Length)];
     }
 }

@@ -958,6 +958,7 @@ MonoBehaviour:
   audioSource: {fileID: 51339457}
   soundCorrect: {fileID: 8300000, guid: c223a86e0c0d4a44a888a2fa03bad3f4, type: 3}
   soundFalse: {fileID: 8300000, guid: e6a929b6741cb6742924536ac5b85e0e, type: 3}
+  soundOpeningGate: {fileID: 8300000, guid: 1ac5b4ce934beb6439a66f38adb67cd1, type: 3}
   volume: 0.5
 --- !u!114 &391978743
 MonoBehaviour:
@@ -1748,7 +1749,6 @@ GameObject:
   - component: {fileID: 1384765850}
   - component: {fileID: 1384765849}
   - component: {fileID: 1384765848}
-  - component: {fileID: 1384765851}
   m_Layer: 0
   m_Name: validate
   m_TagString: Untagged
@@ -1847,24 +1847,6 @@ Transform:
   m_Father: {fileID: 1104362257}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1384765851
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1384765847}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ced94ff7b14eb29439f05f031f2ce67e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioSource: {fileID: 51339457}
-  falseClip: {fileID: 8300000, guid: e6a929b6741cb6742924536ac5b85e0e, type: 3}
-  validateClip: {fileID: 8300000, guid: c223a86e0c0d4a44a888a2fa03bad3f4, type: 3}
-  doorOpen: {fileID: 8300000, guid: 1ac5b4ce934beb6439a66f38adb67cd1, type: 3}
-  volume: 0.5
-  nc: {fileID: 391978742}
 --- !u!1 &1451947413
 GameObject:
   m_ObjectHideFlags: 0
@@ -2136,7 +2118,6 @@ GameObject:
   - component: {fileID: 2072237058}
   - component: {fileID: 2072237057}
   - component: {fileID: 2072237056}
-  - component: {fileID: 2072237059}
   m_Layer: 0
   m_Name: delete
   m_TagString: Untagged
@@ -2235,24 +2216,6 @@ Transform:
   m_Father: {fileID: 1104362257}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2072237059
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2072237055}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ced94ff7b14eb29439f05f031f2ce67e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioSource: {fileID: 51339457}
-  falseClip: {fileID: 8300000, guid: 69a27289daef84540aad26c94f8cfb86, type: 3}
-  validateClip: {fileID: 8300000, guid: 69a27289daef84540aad26c94f8cfb86, type: 3}
-  doorOpen: {fileID: 8300000, guid: 1ac5b4ce934beb6439a66f38adb67cd1, type: 3}
-  volume: 0.5
-  nc: {fileID: 391978742}
 --- !u!1001 &6385514597803535913
 PrefabInstance:
   m_ObjectHideFlags: 0

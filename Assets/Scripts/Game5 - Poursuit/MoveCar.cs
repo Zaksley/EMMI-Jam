@@ -7,16 +7,19 @@ public class MoveCar : MonoBehaviour
     [SerializeField] private float moveSpeed = 1.0f;
     [SerializeField] private Transform target;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void Update()
     {
         float step =  moveSpeed * Time.deltaTime;
         transform.position = Vector3.MoveTowards(transform.position, target.position, step); 
+    }
+    
+    private void OnTriggerEnter2D(Collider2D other) 
+    {
+        Debug.Log("in");
+        if (other.gameObject.CompareTag("Death"))
+        {
+            Destroy(gameObject); 
+        }
     }
 }

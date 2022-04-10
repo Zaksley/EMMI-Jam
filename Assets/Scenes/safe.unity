@@ -123,6 +123,134 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &51339456
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 51339458}
+  - component: {fileID: 51339457}
+  m_Layer: 0
+  m_Name: Audio Source
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &51339457
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 51339456}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: -5583095365044697114, guid: 311dbd35eef89614c851d2b420154ee4,
+    type: 2}
+  m_audioClip: {fileID: 8300000, guid: 5467a79b72937c842b0e5a6bfa750846, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &51339458
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 51339456}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &62459411
 GameObject:
   m_ObjectHideFlags: 0
@@ -820,6 +948,7 @@ MonoBehaviour:
   MaxNbFlash: 3
   win: 0
   background_win: {fileID: 21300000, guid: a4ed395cd6a4622408f991f93818e4c0, type: 3}
+  digitSound: {fileID: 8300000, guid: 320a25dd65a6b914a83918809e3bfe63, type: 3}
 --- !u!114 &391978743
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -835,6 +964,8 @@ MonoBehaviour:
   sizeBox: 0.52
   boxOffsetX: -0.2
   boxOffsetY: -0.38
+  audioSource: {fileID: 51339457}
+  volume: 0.5
   digicodes:
   - {fileID: 21300000, guid: eaf03fce12c47794392775bbb2b6e499, type: 3}
   - {fileID: 21300000, guid: 28595bb6b684747458ba8cbe52d5bcc4, type: 3}
@@ -849,6 +980,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: b6acac1a4061ca74abab423e23def42f, type: 3}
   - {fileID: 21300000, guid: e8eebe39bacd25e43a52de681d52b68b, type: 3}
   durationChangeSprite: 0.2
+  digitSound: {fileID: 8300000, guid: 320a25dd65a6b914a83918809e3bfe63, type: 3}
   validate: {fileID: 1384765848}
   delete: {fileID: 2072237056}
 --- !u!1 &510294334
@@ -1602,6 +1734,7 @@ GameObject:
   - component: {fileID: 1384765850}
   - component: {fileID: 1384765849}
   - component: {fileID: 1384765848}
+  - component: {fileID: 1384765851}
   m_Layer: 0
   m_Name: validate
   m_TagString: Untagged
@@ -1700,6 +1833,24 @@ Transform:
   m_Father: {fileID: 1104362257}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1384765851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1384765847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ced94ff7b14eb29439f05f031f2ce67e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 51339457}
+  falseClip: {fileID: 8300000, guid: e6a929b6741cb6742924536ac5b85e0e, type: 3}
+  validateClip: {fileID: 8300000, guid: c223a86e0c0d4a44a888a2fa03bad3f4, type: 3}
+  doorOpen: {fileID: 8300000, guid: 1ac5b4ce934beb6439a66f38adb67cd1, type: 3}
+  volume: 0.5
+  nc: {fileID: 391978742}
 --- !u!1 &1451947413
 GameObject:
   m_ObjectHideFlags: 0
@@ -1965,6 +2116,7 @@ GameObject:
   - component: {fileID: 2072237058}
   - component: {fileID: 2072237057}
   - component: {fileID: 2072237056}
+  - component: {fileID: 2072237059}
   m_Layer: 0
   m_Name: delete
   m_TagString: Untagged
@@ -2063,3 +2215,21 @@ Transform:
   m_Father: {fileID: 1104362257}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2072237059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2072237055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ced94ff7b14eb29439f05f031f2ce67e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 51339457}
+  falseClip: {fileID: 8300000, guid: 69a27289daef84540aad26c94f8cfb86, type: 3}
+  validateClip: {fileID: 8300000, guid: 69a27289daef84540aad26c94f8cfb86, type: 3}
+  doorOpen: {fileID: 8300000, guid: 1ac5b4ce934beb6439a66f38adb67cd1, type: 3}
+  volume: 0.5
+  nc: {fileID: 391978742}

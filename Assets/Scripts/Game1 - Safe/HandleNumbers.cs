@@ -10,12 +10,14 @@ public class HandleNumbers : MonoBehaviour
     [SerializeField] private float boxOffsetY = 2f;
 
     private List<BoxCollider2D> boxes = new List<BoxCollider2D>(); 
-
+    public AudioSource audioSource;
+    public float volume=0.5f;
     [SerializeField] private Sprite[] digicodes; 
     private int digicodeValidate = 10;
     private int digicodeDelete = 11; 
     [SerializeField] private float durationChangeSprite = 0.5f;
     private float changeSprite = 0f;  
+     public AudioClip digitSound; 
 
     private NumbersController controller; 
 
@@ -55,7 +57,8 @@ public class HandleNumbers : MonoBehaviour
             for(int i=0; i<boxes.Count; i++)
             {
                 if (GameObject.ReferenceEquals(boxes[i], cubeHit.collider))
-                {
+                {  
+                    audioSource.PlayOneShot(digitSound, volume);
                     controller.UpdateText(i+1);
                     ChangeSprite(i+1);
                 }

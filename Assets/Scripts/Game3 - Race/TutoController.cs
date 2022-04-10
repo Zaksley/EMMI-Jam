@@ -5,11 +5,12 @@ using UnityEngine;
 public class TutoController : MonoBehaviour
 {
     private float time;
+    [SerializeField] private float showTime;
 
     void Update()
     {
         time += Time.deltaTime;
-        if (time > 4f) {
+        if (time > showTime) {
             gameObject.SetActive(false);
         }
     }

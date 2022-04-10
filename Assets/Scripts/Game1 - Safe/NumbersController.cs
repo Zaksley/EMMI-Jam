@@ -34,6 +34,14 @@ public class NumbersController : MonoBehaviour
     public AudioClip digitSound; 
     private gameManager manager;
 
+
+    public AudioSource audioSource;
+    public AudioClip soundCorrect; 
+    public AudioClip soundFalse; 
+    [SerializeField] AudioClip soundOpeningGate;
+    
+    public float volume=0.5f;
+
     // Start is called before the first frame update
     void Start()
     {   
@@ -119,13 +127,14 @@ public class NumbersController : MonoBehaviour
             printWin();
             flash();
             win = true;
+            audioSource.PlayOneShot(soundCorrect, volume);
+            audioSource.PlayOneShot(soundOpeningGate, volume);
             return true;
         }
         else 
         {
-            // TODO: Display error 
-            // Sound erreur 
             flash();
+            audioSource.PlayOneShot(soundFalse, volume);
             return false;
         }
     }

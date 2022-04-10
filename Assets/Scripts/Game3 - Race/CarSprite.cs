@@ -106,9 +106,8 @@ public class CarSprite : MonoBehaviour
         defeatScene.SetActive(true);
         gameObject.GetComponent<Collider2D>().enabled = false;
         yield return new WaitForSeconds(2f);
-        manager.defeat();
-        blackScreen.SetActive(false);
         volume = 0;
+        manager.defeat();
         yield return null;
     }
 

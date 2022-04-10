@@ -4,14 +4,10 @@ using UnityEngine;
 
 public class RandomTree : MonoBehaviour
 {
+    [SerializeField] private Sprite[] trees; 
     void Start()
     {
-        
-    }
+        GetComponent<SpriteRenderer>().sprite = trees[Random.Range(0, trees.Length)]; 
 
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

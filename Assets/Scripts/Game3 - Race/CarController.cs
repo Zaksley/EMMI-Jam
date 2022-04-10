@@ -12,6 +12,12 @@ public class CarController : MonoBehaviour
     public GameObject carSprite;
     public float turnSize;
     public float acceleration;
+    public AudioSource audioSource;
+    public AudioClip left;
+    public AudioClip right;
+    public AudioClip crash;
+
+    public float volume=1f;
 
 
     void Start()
@@ -33,9 +39,11 @@ public class CarController : MonoBehaviour
         //MOVEMENT
         if(transform.position.x == carSprite.transform.position.x) {
             if (Input.GetKeyDown(KeyCode.RightArrow)) { //LE JOUEUR VA À DROITE
+                audioSource.PlayOneShot(right, volume);
                 StartCoroutine(TurnAnimation(-1f));
                 if (transform.position == rightLane.transform.position) { // si on est déjà à droite
                     //bruit de blocage
+                    audioSource.PlayOneShot(crash, volume = 1f);
                     StartCoroutine(carSprite.GetComponent<CarSprite>().LoseLife());
                 } else if (transform.position == middleLane.transform.position) { // si on est au milieu
                     transform.position = rightLane.transform.position;
@@ -43,6 +51,7 @@ public class CarController : MonoBehaviour
                     transform.position = middleLane.transform.position;
                 }
             } else if (Input.GetKeyDown(KeyCode.LeftArrow)) { // LE JOUEUR VA À GAUCHE
+                audioSource.PlayOneShot(left, volume);
                 StartCoroutine(TurnAnimation(1f));
                 if (transform.position == rightLane.transform.position) { // si on est à droite
                     transform.position = middleLane.transform.position;
@@ -50,6 +59,7 @@ public class CarController : MonoBehaviour
                     transform.position = leftLane.transform.position;
                 } else if (transform.position == leftLane.transform.position) { //si on est déjà à gauche
                     //bruit de blocage
+                    audioSource.PlayOneShot(crash, volume = 1f);
                     StartCoroutine(carSprite.GetComponent<CarSprite>().LoseLife());
                 }
             }

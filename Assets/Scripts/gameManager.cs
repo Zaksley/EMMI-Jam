@@ -62,8 +62,8 @@ public class gameManager : MonoBehaviour
             if (lastTransition == 9)
             {
                 Debug.Log("ouai");
-                numberTransition = 11;
-                SceneManager.LoadScene("Transition11");
+                numberTransition = 12;
+                SceneManager.LoadScene("Transition12");
             }
             if (lastTransition == 13)
             {
@@ -93,6 +93,8 @@ public class gameManager : MonoBehaviour
             else{
                 if (numberGame == 3)
                 {
+                    Debug.Log("transition");
+                    Debug.Log(lastTransition);
                     if (lastTransition == 10)
                     {
                         numberTransition = 3;
@@ -234,7 +236,7 @@ public class gameManager : MonoBehaviour
                                                 else{
                                                     if (numberTransition == 10)
                                                     {
-                                                        lastTransition = 9;
+                                                        lastTransition = 10;
                                                         numberGame = 3;
                                                         SceneManager.LoadScene("Jeu3");
                                                     }

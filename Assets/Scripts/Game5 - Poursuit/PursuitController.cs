@@ -6,17 +6,20 @@ public class PursuitController : MonoBehaviour
 {
 
     private float goUp = 0f; 
+    private  float goSide = 0f;
     
-    private float timeMove = 0.2f; 
+    [SerializeField] private float timeMove = 0.3f; 
     private float currentTimeMove; 
     private bool canMove; 
     [SerializeField] private float moveY = 0.5f; 
-    private Vector3 translation; 
+    [SerializeField] private float moveX = 0.5f;
+    private Vector3 translationUp; 
+    private Vector3 translationSide; 
 
     // Start is called before the first frame update
     void Start()
     {
-        translation = new Vector3(0, moveY, 0); 
+        translationUp = new Vector3(0, moveY, 0); 
         currentTimeMove = 0f; 
     }
 
@@ -24,14 +27,28 @@ public class PursuitController : MonoBehaviour
     void Update()
     {
         goUp = Input.GetAxisRaw("Vertical"); 
+        goSide = Input.GetAxisRaw("Horizontal"); 
 
         setupMove(); 
 
-        if (canMove && (goUp == 1))
+        // Move side or up
+        if (canMove)
         {
-            Move(); 
-            currentTimeMove = timeMove; 
+            if (goUp == 1)
+            {
+                Move(translationUp); 
+                currentTimeMove = timeMove; 
+            }
+            else if (goSide != 0)
+            {
+                translationSide = new Vector3(moveX * goSide, 0, 0);
+                Move(translationSide); 
+                currentTimeMove = timeMove; 
+            }
         }
+
+
+
 
     }
 
@@ -48,17 +65,17 @@ public class PursuitController : MonoBehaviour
         }
     }
 
-    void Move() 
+    void Move(Vector3 t) 
     {
-        transform.Translate(translation, Space.World); 
+        transform.Translate(t, Space.World); 
     }
 
     void OnTriggerEnter2D(Collider2D other) 
     {
-        Debug.Log("test");
+        
         if (other.gameObject.CompareTag("Car"))
         {
-            Debug.Log("player dead");
+            // Death
         }
     }
 }

@@ -16,6 +16,9 @@ public class IngotCollision : MonoBehaviour
     [SerializeField] private GameObject player; 
     public int index; 
     [SerializeField] private Vector3 offSet; 
+    public AudioSource audioSource;
+    public AudioClip earned;
+    public float volume=1f;
 
     void Start()
     {

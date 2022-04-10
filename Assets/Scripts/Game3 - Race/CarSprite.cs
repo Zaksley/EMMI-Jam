@@ -12,6 +12,12 @@ public class CarSprite : MonoBehaviour
     public bool isBlinking = false;
     SpriteRenderer carSprite;
     Color defaultColor;
+    public AudioSource audioSource;
+    public AudioClip win;
+    public AudioClip loose;
+    public AudioClip crash;
+    public AudioClip carTouched;
+    public float volume=0.5f;
     public GameObject mainCamera;
 
     public GameObject[] tire;
@@ -28,6 +34,8 @@ public class CarSprite : MonoBehaviour
         transform.position = Vector2.MoveTowards(transform.position, movePoint.transform.position, step * Time.deltaTime);
         //FINAL GAME OVER
         if (lives == 0) {
+            audioSource.PlayOneShot(loose, volume);
+            audioSource.PlayOneShot(crash, volume);
             manager.defeat();
         }
         
@@ -38,12 +46,14 @@ public class CarSprite : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collision) {
         //LOSE
         if (collision.tag == "Obstacle") {
+            audioSource.PlayOneShot(carTouched, volume);
             StartCoroutine(LoseLife());
             StartCoroutine(DestroyObstacle(collision.gameObject));
         }
 
         //WIN
         if (collision.tag == "Win") {
+            audioSource.PlayOneShot(win, volume);
             manager.victory();
         }
 

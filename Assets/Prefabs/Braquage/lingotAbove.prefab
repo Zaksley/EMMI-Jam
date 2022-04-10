@@ -128,3 +128,6 @@ MonoBehaviour:
   player: {fileID: 0}
   index: 0
   offSet: {x: 0, y: 10, z: 0}
+  audioSource: {fileID: 0}
+  earned: {fileID: 8300000, guid: 801d8fb5a7d1d7547a18c49dbe77c25c, type: 3}
+  volume: 1

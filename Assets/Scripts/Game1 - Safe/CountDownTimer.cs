@@ -10,6 +10,9 @@ public class CountDownTimer : MonoBehaviour
     private float displayTime = 0f;
     [SerializeField] private float startingTime = 30f;
     [SerializeField] private float introductionTime = 3f;
+    [SerializeField] private float instructionTime = 5f; 
+    [SerializeField] private GameObject UItext1; 
+    [SerializeField] private GameObject UItext2;     
     [SerializeField] private NumbersController numbers;
 
     [SerializeField] TMP_Text countdown;
@@ -49,10 +52,22 @@ public class CountDownTimer : MonoBehaviour
         }
         else
         {
+                // Intro 
             introductionTime -= 1 * Time.deltaTime; 
             if (introductionTime <= 0)
             {
                 start = true; 
+            }
+        }
+
+            // Instruction 
+        if (instructionTime >= 0) instructionTime -= Time.deltaTime; 
+        else 
+        {
+            if (UItext1.GetComponent<SpriteRenderer>().enabled && UItext2.GetComponent<SpriteRenderer>().enabled)
+            {
+                UItext1.GetComponent<SpriteRenderer>().enabled = false;
+                UItext2.GetComponent<SpriteRenderer>().enabled = false;
             }
         }
            

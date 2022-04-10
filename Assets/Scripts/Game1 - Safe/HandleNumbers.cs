@@ -17,7 +17,8 @@ public class HandleNumbers : MonoBehaviour
     private int digicodeDelete = 11; 
     [SerializeField] private float durationChangeSprite = 0.5f;
     private float changeSprite = 0f;  
-     public AudioClip digitSound; 
+    public AudioClip digitSound; 
+    public AudioClip soundDelete; 
 
     private NumbersController controller; 
 
@@ -71,6 +72,7 @@ public class HandleNumbers : MonoBehaviour
             }
             else if (GameObject.ReferenceEquals(delete, cubeHit.collider))
             {
+                audioSource.PlayOneShot(soundDelete, volume);
                 controller.DeleteText();
                 ChangeSprite(digicodeDelete); 
             }

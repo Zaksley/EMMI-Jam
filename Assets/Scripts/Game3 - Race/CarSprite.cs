@@ -22,6 +22,10 @@ public class CarSprite : MonoBehaviour
 
     public GameObject[] tire;
 
+    public GameObject defeatScene;
+    public GameObject blackScreen;
+    public GameObject copCar;
+
 
     void Start() {
         manager = GameObject.Find("dontDestroy").gameObject.GetComponent<dontDestroy>().save.GetComponent<gameManager>();
@@ -34,9 +38,9 @@ public class CarSprite : MonoBehaviour
         transform.position = Vector2.MoveTowards(transform.position, movePoint.transform.position, step * Time.deltaTime);
         //FINAL GAME OVER
         if (lives == 0) {
-            audioSource.PlayOneShot(loose, volume);
-            audioSource.PlayOneShot(crash, volume);
-            manager.defeat();
+
+            StartCoroutine(GameOver());
+
         }
         
         if (isBlinking) StartCoroutine(Blink());
@@ -53,8 +57,7 @@ public class CarSprite : MonoBehaviour
 
         //WIN
         if (collision.tag == "Win") {
-            audioSource.PlayOneShot(win, volume);
-            manager.victory();
+            StartCoroutine(Win());
         }
 
     }
@@ -97,5 +100,25 @@ public class CarSprite : MonoBehaviour
         yield return null;
     }
 
+    public IEnumerator GameOver() {
+        audioSource.PlayOneShot(loose, volume);
+        audioSource.PlayOneShot(crash, volume);
+        yield return new WaitForSeconds(1f);
+        defeatScene.SetActive(true);
+        gameObject.GetComponent<Collider2D>().enabled = false;
+        yield return new WaitForSeconds(2f);
+        volume = 0;
+        manager.defeat();
+        yield return null;
+    }
+
+    public IEnumerator Win() {
+        copCar.SetActive(false);
+        audioSource.PlayOneShot(win, volume);
+        defeatScene.SetActive(true);
+        yield return new WaitForSeconds(2f);
+        manager.victory();
+        yield return null;
+    }
 
 }

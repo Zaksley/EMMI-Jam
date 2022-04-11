@@ -14,6 +14,9 @@ public class BraquageController : MonoBehaviour
 
     [SerializeField]  private Image fillTime;
     [SerializeField]  private Image fillLingot;
+    [SerializeField]  private float timeTutorial = 2.0f;
+    public bool started = false;
+
     public AudioSource audioSource;
     public AudioClip lingot;
 
@@ -22,24 +25,38 @@ public class BraquageController : MonoBehaviour
     {
         manager = GameObject.Find("dontDestroy").gameObject.GetComponent<dontDestroy>().save.GetComponent<gameManager>();
 
-        currentTime = startTime;
+        currentTime = timeTutorial;
+        fillLingot.fillAmount = 0; 
+        fillTime.fillAmount = startTime;
     }
 
 void Update()
     {
-        currentTime -= 1 * Time.deltaTime; 
-
-        if (currentTime <= 0)
+        if (started)
         {
-            currentTime = 0; 
-            manager.defeat();
+            currentTime -= 1 * Time.deltaTime; 
+
+            if (currentTime <= 0)
+            {
+                currentTime = 0; 
+                manager.defeat();
+            }
+
+            double time = (float) currentTime / (float) startTime;
+            double lingots = (float) nbLingots / (float) needLingots; 
+
+            fillTime.fillAmount = (float) time; 
+            fillLingot.fillAmount = (float) lingots; 
         }
-
-        double time = (float) currentTime / (float) startTime;
-        double lingots = (float) nbLingots / (float) needLingots; 
-
-        fillTime.fillAmount = (float) time; 
-        fillLingot.fillAmount = (float) lingots; 
+        else 
+        {
+            currentTime -= 1 * Time.deltaTime; 
+            if (currentTime <= 0)
+            {
+                currentTime = startTime; 
+                started = true; 
+            }
+        }
     }   
 
     public void getLingot(int value)

@@ -17,7 +17,6 @@ public class DialogueManager : MonoBehaviour
 
     private void Awake() 
     {
-        
         if(instance != null)
         {
             Debug.Log("pas de dialogueManager");
@@ -64,7 +63,6 @@ public class DialogueManager : MonoBehaviour
     }
     void EndDialogue()
     {
-        Debug.Log("fin du dialogue");
         GameObject.Find("dialogueTransition").gameObject.GetComponent<dialogueTransition0>().nextDialogue = true;
     }
 }

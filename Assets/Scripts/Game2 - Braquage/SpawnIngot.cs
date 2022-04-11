@@ -23,7 +23,7 @@ public class SpawnIngot : MonoBehaviour
             Locations.Add(spawnLocations[i]); 
         }
 
-        InvokeRepeating("SelectSpawn", spawnTime, spawnTime);
+        InvokeRepeating("SelectSpawn", 0.1f, spawnTime);
 
     }
 

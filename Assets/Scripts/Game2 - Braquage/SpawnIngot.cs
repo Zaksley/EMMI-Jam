@@ -11,10 +11,12 @@ public class SpawnIngot : MonoBehaviour
     [SerializeField] private GameObject prefabIngotAbovePlayer;
 
     [SerializeField] private float spawnTime;
+    private GameObject controller; 
 
     void Start()
     {
         Locations = new List<GameObject>(); 
+        controller = GameObject.Find("BraquageController");
 
         spawnLocations = GameObject.FindGameObjectsWithTag("SpawnLocation");
         
@@ -29,16 +31,19 @@ public class SpawnIngot : MonoBehaviour
 
     private void SelectSpawn()
     {
-        if (Locations.Count > 0)
+        if (controller.GetComponent<BraquageController>().started)
         {
-            int spawnIndex = Random.Range(0, Locations.Count);
-
-            for(int i=0; i<spawnLocations.Length; i++)
+            if (Locations.Count > 0)
             {
-                if (ReferenceEquals(Locations[spawnIndex], spawnLocations[i]))
+                int spawnIndex = Random.Range(0, Locations.Count);
+
+                for(int i=0; i<spawnLocations.Length; i++)
                 {
-                    CreateIngot(i);
-                    return;
+                    if (ReferenceEquals(Locations[spawnIndex], spawnLocations[i]))
+                    {
+                        CreateIngot(i);
+                        return;
+                    }
                 }
             }
         }

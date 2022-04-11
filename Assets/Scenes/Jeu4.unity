@@ -773,6 +773,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 49069ad5a1d08a54da78143a526a7642, type: 3}
   - {fileID: 21300000, guid: 9552328ab2b9e2d4ea8e645b5eec9bf5, type: 3}
   - {fileID: 21300000, guid: 1b5550a5483001b4da97d1776751e903, type: 3}
+  block: 0
 --- !u!1001 &624393034
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1149,6 +1150,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 999aab80a2d6d204ea2abda9846bcccd, type: 3}
   - {fileID: 21300000, guid: abc51be03e0f956409272c77f7bdd1fa, type: 3}
   - {fileID: 21300000, guid: 6c67f28f42318964ca5cd32c86b11539, type: 3}
+  detector: {fileID: 396885930}
 --- !u!1001 &998623268
 PrefabInstance:
   m_ObjectHideFlags: 0

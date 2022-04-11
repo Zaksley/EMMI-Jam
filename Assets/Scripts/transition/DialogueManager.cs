@@ -19,7 +19,6 @@ public class DialogueManager : MonoBehaviour
     {
         if(instance != null)
         {
-            Debug.Log("pas de dialogueManager");
             return;
         }
         instance = this;

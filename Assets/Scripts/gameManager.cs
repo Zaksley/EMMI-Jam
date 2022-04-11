@@ -58,10 +58,8 @@ public class gameManager : MonoBehaviour
 
         if (numberGame == 5)
         {
-            Debug.Log(lastTransition);
             if (lastTransition == 9)
             {
-                Debug.Log("ouai");
                 numberTransition = 12;
                 SceneManager.LoadScene("Transition12");
             }
@@ -76,7 +74,6 @@ public class gameManager : MonoBehaviour
 
     public void defeat()
     {
-        Debug.Log("enter defeat");
         if (numberGame == 1)
         {
             numberTransition = 1;
@@ -93,8 +90,6 @@ public class gameManager : MonoBehaviour
             else{
                 if (numberGame == 3)
                 {
-                    Debug.Log("transition");
-                    Debug.Log(lastTransition);
                     if (lastTransition == 10)
                     {
                         numberTransition = 3;
@@ -112,7 +107,6 @@ public class gameManager : MonoBehaviour
                         {
                             if (lastTransition == 1)
                             {
-                                Debug.Log("deafat 4");
                                 numberTransition = 9;
                                 SceneManager.LoadScene("Transition9");
                             }
@@ -216,7 +210,6 @@ public class gameManager : MonoBehaviour
                                         }
 
                                         else{
-                                            Debug.Log("test");
                                             if (numberTransition == 100)
                                             {
                                                 lastTransition = -1;
@@ -226,7 +219,6 @@ public class gameManager : MonoBehaviour
 
                                             else
                                             {
-                                                Debug.Log("transi9");
                                                 if (numberTransition == 9)
                                                 {
                                                     lastTransition = 9;

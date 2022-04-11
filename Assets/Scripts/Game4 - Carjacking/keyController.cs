@@ -4,17 +4,15 @@ using UnityEngine;
 
 public class keyController : MonoBehaviour
 {
-    // Start is called before the first frame update
 
     public Sprite[] keySprites;
-    void Start()
-    {
-        
-    }
+    public GameObject detector;
 
-    // Update is called once per frame
     void Update()
     {
+        if (detector.GetComponent<detector>().block) { //bloque le tournage de la poignée si le joueur a perdu
+            return;
+        }
         if (Input.GetKey(KeyCode.UpArrow))
         {
             this.GetComponent<SpriteRenderer>().sprite = keySprites[0];

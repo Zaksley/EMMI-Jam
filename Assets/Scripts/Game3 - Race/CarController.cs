@@ -38,7 +38,7 @@ public class CarController : MonoBehaviour
 
         //MOVEMENT
         if(transform.position.x == carSprite.transform.position.x) {
-            if (Input.GetKeyDown(KeyCode.RightArrow)) { //LE JOUEUR VA À DROITE
+            if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D)) { //LE JOUEUR VA À DROITE
                 audioSource.PlayOneShot(right, volume);
                 StartCoroutine(TurnAnimation(-1f));
                 if (transform.position == rightLane.transform.position) { // si on est déjà à droite
@@ -50,7 +50,7 @@ public class CarController : MonoBehaviour
                 } else if (transform.position == leftLane.transform.position) { //si on est à gauche
                     transform.position = middleLane.transform.position;
                 }
-            } else if (Input.GetKeyDown(KeyCode.LeftArrow)) { // LE JOUEUR VA À GAUCHE
+            } else if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.Q)) { // LE JOUEUR VA À GAUCHE
                 audioSource.PlayOneShot(left, volume);
                 StartCoroutine(TurnAnimation(1f));
                 if (transform.position == rightLane.transform.position) { // si on est à droite

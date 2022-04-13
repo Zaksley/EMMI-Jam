@@ -32,45 +32,51 @@ public class detector : MonoBehaviour
         if (block) {
             return;
         }
+
+        bool upPressed =  (Input.GetKey(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.Z)); 
+        bool rightPressed = (Input.GetKey(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D)); 
+        bool leftPressed = (Input.GetKey(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.Q)); 
+        bool downPressed = (Input.GetKey(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S)); 
+
         if (info != null)
         {
-            if (Input.GetKey(KeyCode.UpArrow) && nbArrow==0 && !block)
+            if (upPressed && nbArrow==0 && !block)
             {
                 Destroy(info.gameObject);
                 numberOfArrow-=1;
                 this.GetComponent<SpriteRenderer>().sprite = circleSprites[1];
                 audioSource.PlayOneShot(good, volume);
-            } else if (Input.GetKey(KeyCode.UpArrow) && nbArrow!=0 && !block) {
+            } else if (upPressed && nbArrow!=0 && !block) {
                 StartCoroutine(gameOver());
             }
 
-            if (Input.GetKey(KeyCode.RightArrow) && nbArrow==1 && !block)
+            if (rightPressed && nbArrow==1 && !block)
             {
                 Destroy(info.gameObject);
                 numberOfArrow-=1;
                 this.GetComponent<SpriteRenderer>().sprite = circleSprites[2];
                 audioSource.PlayOneShot(good, volume);
-            } else if (Input.GetKey(KeyCode.RightArrow) && nbArrow!=1 && !block) {
+            } else if (rightPressed && nbArrow!=1 && !block) {
                 StartCoroutine(gameOver());
             }
 
-            if (Input.GetKey(KeyCode.DownArrow) && nbArrow==2 && !block)
+            if (downPressed && nbArrow==2 && !block)
             {
                 Destroy(info.gameObject);
                 numberOfArrow-=1;
                 this.GetComponent<SpriteRenderer>().sprite = circleSprites[3];
                 audioSource.PlayOneShot(good, volume);
-            } else if (Input.GetKey(KeyCode.DownArrow) && nbArrow!=2 && !block) {
+            } else if (downPressed && nbArrow!=2 && !block) {
                 StartCoroutine(gameOver());
             }
 
-            if (Input.GetKey(KeyCode.LeftArrow) && nbArrow==3 && !block)
+            if (leftPressed && nbArrow==3 && !block)
             {
                 Destroy(info.gameObject);
                 numberOfArrow-=1;
                 this.GetComponent<SpriteRenderer>().sprite = circleSprites[4];
                 audioSource.PlayOneShot(good, volume);
-            } else if (Input.GetKey(KeyCode.LeftArrow) && nbArrow!= 3 && !block) {
+            } else if (leftPressed && nbArrow!= 3 && !block) {
                 StartCoroutine(gameOver());
             }
         }

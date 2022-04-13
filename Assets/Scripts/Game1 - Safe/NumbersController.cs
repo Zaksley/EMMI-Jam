@@ -72,16 +72,6 @@ public class NumbersController : MonoBehaviour
                 enableText(); 
             }
         }
-
-        if (Input.GetKey(KeyCode.P))
-        {
-            manager.victory();
-        }
-
-        if (Input.GetKey(KeyCode.M))
-        {
-            manager.defeat();
-        }
     }
     
     public void UpdateText(int number) 

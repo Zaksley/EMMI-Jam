@@ -18,11 +18,18 @@ public class detector : MonoBehaviour
     public Sprite[] circleSprites;
 
     public bool block;
+
+    float y_begin = 44f;
+    float intervalle = 2.86f;
+    //int number_arows =  20;
+
+    public GameObject[] arrows; 
     void Start()
     {
         block = false;
         Debug.Log(info);
         manager = GameObject.Find("dontDestroy").gameObject.GetComponent<dontDestroy>().save.GetComponent<gameManager>();
+        spawn_keys();
     }
 
     // Update is called once per frame
@@ -116,5 +123,14 @@ public class detector : MonoBehaviour
             manager.defeat();
         }
 
+    }
+
+    void spawn_keys(){
+        int i;
+        int randInt;
+        for (i=0;i<numberOfArrow - 1; i++){
+            randInt = Random.Range(0, 4);
+            GameObject instantiatedObject = Instantiate(arrows[randInt],new Vector3(5f,y_begin + i*intervalle,0f),Quaternion.identity);
+        }
     }
 }

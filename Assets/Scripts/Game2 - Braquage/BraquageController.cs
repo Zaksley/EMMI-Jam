@@ -32,6 +32,13 @@ public class BraquageController : MonoBehaviour
 
 void Update()
     {
+
+        /*
+        **   DEBUG **
+        */
+        if (Input.GetKeyDown(KeyCode.P)) manager.victory(); 
+        else if (Input.GetKeyDown(KeyCode.M)) manager.defeat();
+
         if (started)
         {
             currentTime -= 1 * Time.deltaTime; 

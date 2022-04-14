@@ -30,6 +30,12 @@ public class CarController : MonoBehaviour
 
     void Update()
     {
+        /*
+        **   DEBUG **
+        */
+        if (Input.GetKeyDown(KeyCode.P)) manager.victory(); 
+        else if (Input.GetKeyDown(KeyCode.M)) manager.defeat();
+
         //GO FORWARD
         transform.Translate(Vector3.up * Time.deltaTime * speed);
         rightLane.transform.position = new Vector3(rightLane.transform.position.x, transform.position.y, rightLane.transform.position.z);

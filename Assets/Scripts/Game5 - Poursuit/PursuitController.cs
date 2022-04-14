@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class PursuitController : MonoBehaviour
 {
-
-    private float goUp = 0f; 
     private  float goSide = 0f;
     
     [SerializeField] private float timeMove = 0.3f; 
@@ -32,9 +30,10 @@ public class PursuitController : MonoBehaviour
     void Update()
     {
         /*
-        goUp = Input.GetAxisRaw("Vertical"); 
-        goSide = Input.GetAxisRaw("Horizontal"); 
+        **   DEBUG **
         */
+        if (Input.GetKeyDown(KeyCode.P)) manager.victory(); 
+        else if (Input.GetKeyDown(KeyCode.M)) manager.defeat();
 
         setupMove(); 
 

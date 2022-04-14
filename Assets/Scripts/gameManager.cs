@@ -10,6 +10,35 @@ public class gameManager : MonoBehaviour
     public int lastTransition;
     //public int lastGame;
 
+    public bool UpPressed;
+    public bool RightPressed;
+    public bool LeftPressed; 
+    public bool DownPressed; 
+    public bool isAzerty; 
+
+    private void Start() 
+    {
+        isAzerty = false; 
+    }
+
+    private void Update() 
+    {
+        // Unchanged
+
+        RightPressed = Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D); 
+        DownPressed = Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S); 
+
+        if (isAzerty) 
+        {
+            UpPressed = Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.Z); 
+            LeftPressed = Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.Q); 
+        }
+        else 
+        {
+            UpPressed = Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W); 
+            LeftPressed = Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A); 
+        }
+    }
     
     
     public void victory()

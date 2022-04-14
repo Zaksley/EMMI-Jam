@@ -10,19 +10,28 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float moveSpeed;
     [SerializeField] private float rotationSpeed; 
     private Vector2 moveDirection; 
-
+    private gameManager manager;
 
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponentInParent<Rigidbody2D>();
+        manager = GameObject.Find("dontDestroy").gameObject.GetComponent<dontDestroy>().save.GetComponent<gameManager>();
+    
     }
 
     private void ProcessInputs()
     {
-        moveDirection.x = Input.GetAxisRaw("Horizontal"); 
-        moveDirection.y = Input.GetAxisRaw("Vertical"); 
+        moveDirection.x = 0;
+        moveDirection.y = 0;
+
+        if (manager.UpPressedAnytime)           moveDirection.y = 1f;
+        else if (manager.DownPressedAnytime)    moveDirection.y = -1f;
+
+        if (manager.RightPressedAnytime)        moveDirection.x = 1f;
+        else if (manager.LeftPressedAnytime)    moveDirection.x = -1f;
+
     }
 
     // Update is called once per frame

@@ -59,10 +59,10 @@ public class PursuitController : MonoBehaviour
             }
         }
 
-        /*
-        if (goUp == 1)   animator.SetFloat("Speed", 1f);
-        else             animator.SetFloat("Speed", 0);
-        */
+        
+        if (manager.UpPressed)   animator.SetFloat("Speed", 1f);
+        else                     animator.SetFloat("Speed", 0);
+        
 
     }
 

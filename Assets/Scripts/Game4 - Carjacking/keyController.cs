@@ -7,28 +7,34 @@ public class keyController : MonoBehaviour
 
     public Sprite[] keySprites;
     public GameObject detector;
+    private gameManager manager;
+
+    private void Start() 
+    {
+        manager = GameObject.Find("dontDestroy").gameObject.GetComponent<dontDestroy>().save.GetComponent<gameManager>();
+    }
 
     void Update()
     {
         if (detector.GetComponent<detector>().block) { //bloque le tournage de la poignée si le joueur a perdu
             return;
         }
-        if (Input.GetKey(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.Z))
+        if (manager.UpPressed)
         {
             this.GetComponent<SpriteRenderer>().sprite = keySprites[0];
         }
 
-        if (Input.GetKey(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D))
+        if (manager.RightPressed)
         {
             this.GetComponent<SpriteRenderer>().sprite = keySprites[1];
         }
 
-        if (Input.GetKey(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S))
+        if (manager.DownPressed)
         {
             this.GetComponent<SpriteRenderer>().sprite = keySprites[2];
         }
 
-        if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.Q))
+        if (manager.LeftPressed)
         {
             this.GetComponent<SpriteRenderer>().sprite = keySprites[3];
         }

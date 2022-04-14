@@ -31,15 +31,21 @@ public class PursuitController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        /*
         goUp = Input.GetAxisRaw("Vertical"); 
         goSide = Input.GetAxisRaw("Horizontal"); 
+        */
 
         setupMove(); 
 
         // Move side or up
         if (canMove)
         {
-            if (goUp == 1)
+            if (manager.RightPressed)       goSide = 1f; 
+            else if (manager.LeftPressed)   goSide = -1f; 
+            else                            goSide = 0; 
+
+            if (manager.UpPressed)
             {
                 animator.SetFloat("Speed", 1f);
                 Move(translationUp); 
@@ -53,9 +59,10 @@ public class PursuitController : MonoBehaviour
             }
         }
 
+        /*
         if (goUp == 1)   animator.SetFloat("Speed", 1f);
         else             animator.SetFloat("Speed", 0);
-
+        */
 
     }
 

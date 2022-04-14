@@ -24,7 +24,6 @@ public class gameManager : MonoBehaviour
     private void Update() 
     {
         // Unchanged
-
         RightPressed = Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D); 
         DownPressed = Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S); 
 

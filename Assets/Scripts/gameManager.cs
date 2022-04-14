@@ -14,6 +14,11 @@ public class gameManager : MonoBehaviour
     public bool RightPressed;
     public bool LeftPressed; 
     public bool DownPressed; 
+
+    public bool UpPressedAnytime; 
+    public bool RightPressedAnytime;
+    public bool LeftPressedAnytime;
+    public bool DownPressedAnytime; 
     public bool isAzerty; 
 
     private void Start() 
@@ -27,15 +32,24 @@ public class gameManager : MonoBehaviour
         RightPressed = Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D); 
         DownPressed = Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S); 
 
+        RightPressedAnytime = Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D); 
+        DownPressedAnytime = Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S); 
+
         if (isAzerty) 
         {
             UpPressed = Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.Z); 
             LeftPressed = Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.Q); 
+
+            UpPressedAnytime = Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.Z); 
+            LeftPressedAnytime = Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.Q); 
         }
         else 
         {
             UpPressed = Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W); 
             LeftPressed = Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A); 
+
+            UpPressedAnytime = Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W); 
+            LeftPressedAnytime = Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A); 
         }
     }
     

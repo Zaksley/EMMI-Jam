@@ -23,7 +23,7 @@ public class gameManager : MonoBehaviour
 
     private void Start() 
     {
-        isAzerty = false; 
+        isAzerty = true; 
     }
 
     private void Update() 

@@ -349,7 +349,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource: {fileID: 1668607069}
   win: {fileID: 8300000, guid: 086f97cb6164c754095d8e1b74739169, type: 3}
-  good: {fileID: 0}
+  good: {fileID: 8300000, guid: cf9d1f7172cee59488121562a7c68543, type: 3}
   volume: 2
   numberOfArrow: 33
   circleSprites:
@@ -779,7 +779,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 1668607069}
-  loose: {fileID: 0}
+  loose: {fileID: 8300000, guid: 6cf86fc525e646b4595775f8b85a0aff, type: 3}
   volume: 5
   detect: {fileID: 396885934}
 --- !u!61 &1973835379

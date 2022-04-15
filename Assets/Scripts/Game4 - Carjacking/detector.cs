@@ -35,7 +35,6 @@ public class detector : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(block);
         if (block) {
             return;
         }

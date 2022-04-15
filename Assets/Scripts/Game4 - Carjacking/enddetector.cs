@@ -12,6 +12,7 @@ public class enddetector : MonoBehaviour
      void OnTriggerEnter2D(Collider2D infoCollision) // le type de la variable est Collision
     {
         audioSource.PlayOneShot(loose, volume);
+        volume = 0f;
         StartCoroutine(detect.gameOver());
     }
 

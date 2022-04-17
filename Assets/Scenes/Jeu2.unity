@@ -5433,11 +5433,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f227a8430a2ded438d7c3c25769b143, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  needLingots: 60
+  needLingots: 50
   startTime: 60
   fillTime: {fileID: 1000118127}
   fillLingot: {fileID: 1733390079}
-  timeTutorial: 4
+  timeTutorial: 5
   started: 0
   audioSource: {fileID: 192437901}
   lingot: {fileID: 8300000, guid: 801d8fb5a7d1d7547a18c49dbe77c25c, type: 3}

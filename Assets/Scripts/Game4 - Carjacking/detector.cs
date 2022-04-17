@@ -7,7 +7,7 @@ public class detector : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip win;
     public AudioClip good; 
-    public float volume=1f;
+    public float volume=0.05f;
 
     public int numberOfArrow;
  
@@ -21,6 +21,9 @@ public class detector : MonoBehaviour
 
     float y_begin = 44f;
     float intervalle = 2.86f;
+    public int language = 0;
+
+    public int numberLifes = 2;
     //int number_arows =  20;
 
     public GameObject[] arrows; 
@@ -30,11 +33,13 @@ public class detector : MonoBehaviour
         Debug.Log(info);
         manager = GameObject.Find("dontDestroy").gameObject.GetComponent<dontDestroy>().save.GetComponent<gameManager>();
         spawn_keys();
+        this.GetComponent<SpriteRenderer>().sprite = circleSprites[0 + language];
     }
 
     // Update is called once per frame
     void Update()
     {
+         Debug.Log(numberLifes);
         if (block) {
             return;
         }
@@ -46,40 +51,88 @@ public class detector : MonoBehaviour
             {
                 Destroy(info.gameObject);
                 numberOfArrow-=1;
-                this.GetComponent<SpriteRenderer>().sprite = circleSprites[1];
+                this.GetComponent<SpriteRenderer>().sprite = circleSprites[2 + language];
                 audioSource.PlayOneShot(good, volume);
             } else if (manager.UpPressed && nbArrow!=0 && !block) {
-                StartCoroutine(gameOver());
+                if (numberLifes > 0){               
+                    if (numberLifes == 2){
+                        this.GetComponent<SpriteRenderer>().sprite = circleSprites[10 + language];
+                    }
+                    else{
+                        this.GetComponent<SpriteRenderer>().sprite = circleSprites[12 + language];
+                    }
+                    numberLifes --;
+                }
+                else {
+                    StartCoroutine(gameOver());
+                }
             }
 
             if (manager.RightPressed && nbArrow==1 && !block)
             {
                 Destroy(info.gameObject);
                 numberOfArrow-=1;
-                this.GetComponent<SpriteRenderer>().sprite = circleSprites[2];
+                this.GetComponent<SpriteRenderer>().sprite = circleSprites[4 + language];
                 audioSource.PlayOneShot(good, volume);
             } else if (manager.RightPressed && nbArrow!=1 && !block) {
-                StartCoroutine(gameOver());
+                if (numberLifes > 0){
+                    if (numberLifes == 2){
+                        this.GetComponent<SpriteRenderer>().sprite = circleSprites[10 + language];
+                    }
+                    else{
+                        this.GetComponent<SpriteRenderer>().sprite = circleSprites[12 + language];
+                    }
+                    numberLifes --;
+                }
+                else {
+                    StartCoroutine(gameOver());
+                }
             }
 
             if (manager.DownPressed && nbArrow==2 && !block)
             {
                 Destroy(info.gameObject);
                 numberOfArrow-=1;
-                this.GetComponent<SpriteRenderer>().sprite = circleSprites[3];
+                this.GetComponent<SpriteRenderer>().sprite = circleSprites[6 + language];
                 audioSource.PlayOneShot(good, volume);
             } else if (manager.DownPressed && nbArrow!=2 && !block) {
-                StartCoroutine(gameOver());
+                if (numberLifes > 0){
+                    if (numberLifes == 2){
+                        this.GetComponent<SpriteRenderer>().sprite = circleSprites[10 + language];
+                    }
+                    else{
+                        this.GetComponent<SpriteRenderer>().sprite = circleSprites[12 + language];
+                    }
+                    numberLifes --;
+                }
+                else {
+                    StartCoroutine(gameOver());
+                }
             }
 
             if (manager.LeftPressed && nbArrow==3 && !block)
             {
                 Destroy(info.gameObject);
                 numberOfArrow-=1;
-                this.GetComponent<SpriteRenderer>().sprite = circleSprites[4];
+                this.GetComponent<SpriteRenderer>().sprite = circleSprites[8 + language];
                 audioSource.PlayOneShot(good, volume);
             } else if (manager.LeftPressed && nbArrow!= 3 && !block) {
-                StartCoroutine(gameOver());
+                if (numberLifes > 0){
+                    if (numberLifes == 2){
+                       
+                        Debug.Log("t");
+                        this.GetComponent<SpriteRenderer>().sprite = circleSprites[10 + language];
+                    }
+                    else{
+                        Debug.Log("t2");
+                        this.GetComponent<SpriteRenderer>().sprite = circleSprites[12 + language];
+                    }
+                    numberLifes --;
+                }
+                else {
+                    StartCoroutine(gameOver());
+                }
+                Debug.Log(numberLifes);
             }
         }
 
@@ -117,7 +170,7 @@ public class detector : MonoBehaviour
     public IEnumerator gameOver(){
         if (!block) {
             block = true;
-            this.GetComponent<SpriteRenderer>().sprite = circleSprites[5];
+            this.GetComponent<SpriteRenderer>().sprite = circleSprites[14+language];
             yield return new WaitForSeconds(2f);
             manager.defeat();
         }

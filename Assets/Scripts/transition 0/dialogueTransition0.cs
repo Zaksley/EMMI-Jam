@@ -27,6 +27,13 @@ public class dialogueTransition0 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.P)) 
+        {
+            manager.nextGame(); 
+            return; 
+        }
+
+
         if (Input.GetKeyDown("space") && !disableSpace)
         {
            DialogueManager.instance.DisplayNextSentence();
@@ -44,6 +51,7 @@ public class dialogueTransition0 : MonoBehaviour
             else 
             {
                 manager.nextGame();
+                return; 
             }
         }
     }

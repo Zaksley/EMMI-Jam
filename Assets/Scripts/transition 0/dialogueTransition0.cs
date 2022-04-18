@@ -5,12 +5,15 @@ using UnityEngine;
 public class dialogueTransition0 : MonoBehaviour
 {
     // Start is called before the first frame update
-   
+    
+    int language = 1;
     public Dialogue[] dialogues;
+    public Dialogue[] dialogues_en;
     public bool nextDialogue;
     int numberDialogue;
     private gameManager manager;
     bool disableSpace;
+    int length;
    
     void Start()
     {
@@ -20,7 +23,12 @@ public class dialogueTransition0 : MonoBehaviour
         numberDialogue=0;
         if (dialogues.Length > numberDialogue)
         {
-            DialogueManager.instance.startDialogue(dialogues[0]);
+            if (language == 0){
+                DialogueManager.instance.startDialogue(dialogues[0]);
+            }
+            else{
+                DialogueManager.instance.startDialogue(dialogues_en[0]);
+            }
         }
     }
 
@@ -44,7 +52,14 @@ public class dialogueTransition0 : MonoBehaviour
         {
             nextDialogue = false;
             numberDialogue+=1;
-            if (dialogues.Length > numberDialogue)
+            if (language == 0){
+                length = dialogues.Length;
+            }
+            else{
+                length = dialogues_en.Length;
+            }
+            
+            if (length > numberDialogue)
             {
                 DialogueManager.instance.startDialogue(dialogues[numberDialogue]);
             }

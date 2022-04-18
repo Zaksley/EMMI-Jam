@@ -235,7 +235,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.05875, y: 0.049337473}
   m_AnchorMax: {x: 0.53249997, y: 0.35066503}
-  m_AnchoredPosition: {x: 6.217987, y: -23.5}
+  m_AnchoredPosition: {x: 6.2179565, y: -23.5}
   m_SizeDelta: {x: 52.0607, y: -34.5696}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &533430405
@@ -393,7 +393,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 159.38004, y: -40.26999}
+  m_AnchoredPosition: {x: 177.8, y: -40.8}
   m_SizeDelta: {x: 112.3, y: 28.344}
   m_Pivot: {x: 0.5, y: 0.36244327}
 --- !u!114 &624009821
@@ -418,10 +418,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 11
+    m_FontSize: 9
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 1
+    m_MinSize: 0
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -851,6 +851,11 @@ MonoBehaviour:
       amass\xE9 les 10 millions de dollars contenus dans la banque, je ne manquerai
       plus jamais de rien, je n\u2019aurai plus \xE0 travailler\u2026"
     - "Mais ce jour-l\xE0, Papi a fait une b\xEAtise\u2026"
+  dialogues_en:
+  - name: Papy
+    sentences:
+    - Heyyy boy
+    - lol
   nextDialogue: 0
 --- !u!114 &1603065679
 MonoBehaviour:

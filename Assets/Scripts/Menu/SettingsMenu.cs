@@ -13,8 +13,12 @@ public class SettingsMenu : MonoBehaviour
 
     Resolution[] resolutions;
 
+    private gameManager manager;
+
     public void Start()
     {
+        manager = GameObject.Find("dontDestroy").gameObject.GetComponent<dontDestroy>().save.GetComponent<gameManager>();
+
         resolutions = Screen.resolutions.Select(resolution => new Resolution { width = resolution.width, height = resolution.height }).Distinct().ToArray();
         resolutionDropdown.ClearOptions();
 

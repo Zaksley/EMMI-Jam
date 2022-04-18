@@ -6,7 +6,7 @@ public class dialogueTransition0 : MonoBehaviour
 {
     // Start is called before the first frame update
     
-    int language = 1;
+    int language = 0;
     public Dialogue[] dialogues;
     public Dialogue[] dialogues_en;
     public bool nextDialogue;
@@ -19,6 +19,7 @@ public class dialogueTransition0 : MonoBehaviour
     {
         disableSpace = false;
         manager = GameObject.Find("dontDestroy").gameObject.GetComponent<dontDestroy>().save.GetComponent<gameManager>();
+
         nextDialogue = false;
         numberDialogue=0;
         if (dialogues.Length > numberDialogue)
@@ -35,6 +36,10 @@ public class dialogueTransition0 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        if (manager.isFrench) language = 0; 
+        else                  language = 1; 
+
         if (Input.GetKeyDown(KeyCode.P)) 
         {
             manager.nextGame(); 
@@ -48,6 +53,7 @@ public class dialogueTransition0 : MonoBehaviour
            disableSpace = true;
            Invoke("ableSpace", 0.5f);
         } 
+        
         if (nextDialogue)
         {
             nextDialogue = false;

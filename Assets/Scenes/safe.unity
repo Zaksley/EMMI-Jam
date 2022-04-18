@@ -953,7 +953,10 @@ MonoBehaviour:
   flashTime: 0.2
   MaxNbFlash: 3
   win: 0
-  background_win: {fileID: 21300000, guid: a4ed395cd6a4622408f991f93818e4c0, type: 3}
+  background_fr: {fileID: 21300000, guid: 7d80d397832dce44a87d419fadc12f6b, type: 3}
+  background_en: {fileID: 21300000, guid: feb72e618124711409e2fe8a30c72f01, type: 3}
+  background_fr_win: {fileID: 21300000, guid: a4ed395cd6a4622408f991f93818e4c0, type: 3}
+  background_en_win: {fileID: 21300000, guid: 3ccf16b0af4ffbe418d86f8f6b4e3b21, type: 3}
   digitSound: {fileID: 8300000, guid: 320a25dd65a6b914a83918809e3bfe63, type: 3}
   audioSource: {fileID: 51339457}
   soundCorrect: {fileID: 8300000, guid: c223a86e0c0d4a44a888a2fa03bad3f4, type: 3}

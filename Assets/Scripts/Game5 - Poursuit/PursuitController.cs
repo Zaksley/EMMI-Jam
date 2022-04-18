@@ -32,8 +32,8 @@ public class PursuitController : MonoBehaviour
         /*
         **   DEBUG **
         */
-        if (Input.GetKeyDown(KeyCode.P)) manager.victory(); 
-        else if (Input.GetKeyDown(KeyCode.M)) manager.defeat();
+        //if (Input.GetKeyDown(KeyCode.P)) manager.victory(); 
+        //else if (Input.GetKeyDown(KeyCode.M)) manager.defeat();
 
         setupMove(); 
 

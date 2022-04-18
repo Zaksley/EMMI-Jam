@@ -30,7 +30,11 @@ public class NumbersController : MonoBehaviour
     [SerializeField] private int MaxNbFlash = 3; 
     public bool win = false;
     private GameObject background;
-    [SerializeField] private Sprite background_win; 
+
+    [SerializeField] private Sprite background_fr; 
+    [SerializeField] private Sprite background_en; 
+    [SerializeField] private Sprite background_fr_win; 
+    [SerializeField] private Sprite background_en_win; 
     public AudioClip digitSound; 
     private gameManager manager;
 
@@ -57,6 +61,10 @@ public class NumbersController : MonoBehaviour
         Texts = new List<TMP_Text>() {Text1, Text2, Text3, Text4}; 
 
         manager = GameObject.Find("dontDestroy").gameObject.GetComponent<dontDestroy>().save.GetComponent<gameManager>();
+
+
+        if (manager.isFrench)    background.GetComponent<SpriteRenderer>().sprite = background_fr; 
+        else                     background.GetComponent<SpriteRenderer>().sprite = background_en; 
     }
 
     void Update() 
@@ -76,8 +84,8 @@ public class NumbersController : MonoBehaviour
         /*
         **   DEBUG **
         */
-        if (Input.GetKeyDown(KeyCode.P)) manager.victory(); 
-        else if (Input.GetKeyDown(KeyCode.M)) manager.defeat();
+        //if (Input.GetKeyDown(KeyCode.P)) manager.victory(); 
+        //else if (Input.GetKeyDown(KeyCode.M)) manager.defeat();
 
     }
     
@@ -143,7 +151,8 @@ public class NumbersController : MonoBehaviour
         Text3.text = "K";  
         Text4.text = "";  
 
-        background.GetComponent<SpriteRenderer>().sprite = background_win; 
+        if (manager.isFrench)    background.GetComponent<SpriteRenderer>().sprite = background_fr_win; 
+        else                     background.GetComponent<SpriteRenderer>().sprite = background_en_win; 
     }
 
     private void disableText()

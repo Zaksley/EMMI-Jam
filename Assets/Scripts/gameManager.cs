@@ -20,10 +20,12 @@ public class gameManager : MonoBehaviour
     public bool LeftPressedAnytime;
     public bool DownPressedAnytime; 
     public bool isAzerty; 
+    public bool isFrench; 
 
     private void Start() 
     {
         isAzerty = true; 
+        isFrench = true; 
     }
 
     private void Update() 
@@ -52,8 +54,20 @@ public class gameManager : MonoBehaviour
             LeftPressedAnytime = Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A); 
         }
     }
-    
-    
+
+    public void changeAzerty()
+    {
+        if (isAzerty) isAzerty = false; 
+        else          isAzerty = true; 
+    }
+
+    public void changeLangage()
+    {
+        if (isFrench) isFrench = false; 
+        else          isFrench = true; 
+    }
+
+
     public void victory()
     {
         //lastTransition = 1

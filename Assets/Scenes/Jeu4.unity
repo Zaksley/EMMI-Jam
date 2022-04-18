@@ -354,23 +354,23 @@ MonoBehaviour:
   numberOfArrow: 33
   circleSprites:
   - {fileID: 21300000, guid: 44d13033c0c67c049ae20b2f63d39cc5, type: 3}
-  - {fileID: 21300000, guid: 3b75aa97bbc336e48bb90c31b2d16418, type: 3}
+  - {fileID: 21300000, guid: ca5e24e9d3daf894784be326be701703, type: 3}
   - {fileID: 21300000, guid: 85431f102ae1f4a4d8252be24fdf6df4, type: 3}
-  - {fileID: 21300000, guid: 18a87ad53a399724796338a2244da2b6, type: 3}
+  - {fileID: 21300000, guid: 7d754fe64895f1a4f8d32fb8193a85a0, type: 3}
   - {fileID: 21300000, guid: feb80057bb779d04b81ad5af0f1ecb37, type: 3}
-  - {fileID: 21300000, guid: e8fd838a052a3914f97ed44f079ffb69, type: 3}
+  - {fileID: 21300000, guid: 0a327295c1fb3044c861866283930bb7, type: 3}
   - {fileID: 21300000, guid: 49069ad5a1d08a54da78143a526a7642, type: 3}
-  - {fileID: 21300000, guid: 8e4ccdaec1ad612458e0e2376677b8fb, type: 3}
+  - {fileID: 21300000, guid: 1a9c57c84d859134a8636b6850ee9546, type: 3}
   - {fileID: 21300000, guid: 9552328ab2b9e2d4ea8e645b5eec9bf5, type: 3}
-  - {fileID: 21300000, guid: 6182bdd524a48a84aa24f8a4540b8dfe, type: 3}
-  - {fileID: 21300000, guid: 355fc6e88a1f7d947a674338834d052a, type: 3}
-  - {fileID: 21300000, guid: 94f1969b48bfde54dbcecdbfb22c224f, type: 3}
-  - {fileID: 21300000, guid: 3b4c3d1f8ab9a944d9bd5a7f7fa31a13, type: 3}
-  - {fileID: 21300000, guid: a046903872bba26458985222a2d98e5c, type: 3}
-  - {fileID: 21300000, guid: fdd71f4ea217e5b4eb4512f70cec22da, type: 3}
-  - {fileID: 21300000, guid: d570675d303926645aaabf896c5041e7, type: 3}
+  - {fileID: 21300000, guid: 74f2ec94f1bd64a428f904daf41102dd, type: 3}
+  - {fileID: 21300000, guid: 630fba2fcb8ca1f48b85f1d0c04ae664, type: 3}
+  - {fileID: 21300000, guid: c8c4c97d2700ad44383991f8c65065b7, type: 3}
+  - {fileID: 21300000, guid: a021a028b4a2ad144abc8b41f43c7b76, type: 3}
+  - {fileID: 21300000, guid: 95a770cff66f15c4bbc8731ac0ed7931, type: 3}
+  - {fileID: 21300000, guid: 90debe4ea476b504c96547cbcad33b09, type: 3}
+  - {fileID: 21300000, guid: 1c3efe35d3fed15418c228ec834088a4, type: 3}
   block: 0
-  language: 1
+  language: 0
   numberLifes: 2
   arrows:
   - {fileID: 6219628036706150081, guid: 6a4ad3d93b0bbf0438e74e0b3f152e54, type: 3}

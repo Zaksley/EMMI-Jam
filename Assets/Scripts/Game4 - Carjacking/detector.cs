@@ -21,7 +21,7 @@ public class detector : MonoBehaviour
 
     float y_begin = 44f;
     float intervalle = 2.86f;
-    public int language = 0;
+    public int language = 1;
 
     public int numberLifes = 2;
     //int number_arows =  20;

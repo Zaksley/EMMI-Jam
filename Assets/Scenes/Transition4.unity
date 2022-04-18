@@ -844,6 +844,31 @@ MonoBehaviour:
   - name: Enfants
     sentences:
     - Bonne nuit papi !
+  dialogues_en:
+  - name: Kids
+    sentences:
+    - Did you manage to escape?...
+  - name: Grandpa
+    sentences:
+    - 'Yes... After I got into the tunnel, I was able to disappear from the radar...
+
+'
+    - ' I missed, but the police didn''t catch me! Your grandpa is a pilot, a real
+      one!...
+
+'
+    - The golden rule, don't get caught! My story ends here!...
+  - name: Kids
+    sentences:
+    - Another story! Another one!...
+  - name: Grandpa
+    sentences:
+    - No! That's all for tonight, it's time to go to sleep because the sandman will
+      come soon...
+    - Good night children!...
+  - name: Kids
+    sentences:
+    - Good night Grandpa!
   nextDialogue: 0
 --- !u!224 &1849189010
 RectTransform:

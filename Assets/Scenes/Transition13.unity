@@ -569,14 +569,28 @@ MonoBehaviour:
   - name: "Grand-p\xE8re"
     sentences:
     - Quelle poisse ! Quel manque de chance !...
-    - "M\xEAme avec la cl\xE9, je n\u2019ai pas r\xE9ussi \xE0 ouvrir ma voiture\u2026\r\nGrand-p\xE8re
-      : J\u2019\xE9tais en plus tr\xE8s charg\xE9 avec tout cet argent !...\r\n"
+    - "M\xEAme avec la cl\xE9, je n\u2019ai pas r\xE9ussi \xE0 ouvrir ma voiture\u2026\r"
+    - "J\u2019\xE9tais en plus tr\xE8s charg\xE9 avec tout cet argent !...\r\n"
   - name: Enfants
     sentences:
     - "Comment as-tu fait ? \u2026"
   - name: "Grand-p\xE8re"
     sentences:
     - "Je n\u2019ai pas eu le choix ! J\u2019ai d\xFB courir\u2026"
+  dialogues_en:
+  - name: Grandpa
+    sentences:
+    - What bad luck! What bad luck!...
+    - 'Even with the key, I couldn''t open my own car...
+
+'
+    - I was also very loaded with all that money!...
+  - name: Kids
+    sentences:
+    - How did you do it? ...
+  - name: Grandpa
+    sentences:
+    - ' I had no choice! I had to run...'
   nextDialogue: 0
 --- !u!224 &738078018
 RectTransform:

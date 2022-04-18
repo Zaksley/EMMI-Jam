@@ -179,6 +179,19 @@ MonoBehaviour:
     - "Enfin\u2026 Bref, je me suis retrouv\xE9 dans de beaux draps. L\u2019alarme
       sonnait, je pouvais entendre les sir\xE8nes se rapprocher\u2026"
     - "Une seule solution : la fuite ! Je me suis \xE9lanc\xE9 vers ma voiture\u2026\r\n"
+  dialogues_en:
+  - name: Kids
+    sentences:
+    - You never found the code grandpa ?...
+  - name: Grandpa
+    sentences:
+    - "You know kids, grandpa has many tricks up his sleeve but he was never really
+      good in that area\u2026"
+    - I even tattooed a wrong code on my arm to mark this failure...
+    - "Anyway\u2026 I found myself in big troubles..."
+    - 'Only one solution, escape!...
+
+'
   nextDialogue: 0
 --- !u!224 &705754049
 RectTransform:

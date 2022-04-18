@@ -885,6 +885,16 @@ MonoBehaviour:
     sentences:
     - "Bien s\xFBr ! Apr\xE8s avoir charg\xE9 tous les lingots dans la voiture, j\u2019ai
       d\xE9marr\xE9 sur les chapeaux de roues\u2026"
+  dialogues_en:
+  - name: Grandpa
+    sentences:
+    - Luckily, I managed to open my door quickly...
+  - name: Kids
+    sentences:
+    - "And the police, were they still on your tail?\r"
+  - name: Grandpa
+    sentences:
+    - "Of course! After loading all the ingots in the car, I drove off at full speed...\r"
   nextDialogue: 0
 --- !u!224 &2121338458
 RectTransform:

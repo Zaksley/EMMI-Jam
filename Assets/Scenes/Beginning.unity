@@ -852,10 +852,23 @@ MonoBehaviour:
       plus jamais de rien, je n\u2019aurai plus \xE0 travailler\u2026"
     - "Mais ce jour-l\xE0, Papi a fait une b\xEAtise\u2026"
   dialogues_en:
-  - name: Papy
+  - name: Kids
     sentences:
-    - Heyyy boy
-    - lol
+    - Grandpa, could you tell us a story ?...
+  - name: 'Grandpa '
+    sentences:
+    - Fine, but after you guys will have to go to bed !...
+    - "A long time ago, when grandpa was still young, some news made the headlines.\r.."
+    - "The city\u2019s bank had been robbed and the least you could say is that I
+      wasn\u2019t exactly a good lad at the time."
+    - " In fact, I was a true thief, stealing money, goods and food left, right and
+      center.\r.."
+    - "But everytime I stole, it was to feed my family and care for my parents and
+      siblings\u2026\r\n"
+    - "I had planned this hold-up for almost five years. After gathering the whole
+      10 million dollars from the bank, I would never need anything or  have to work
+      again\u2026\r\n"
+    - "But this day, grandpa made a mistake\u2026\r"
   nextDialogue: 0
 --- !u!114 &1603065679
 MonoBehaviour:

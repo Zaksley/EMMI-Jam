@@ -681,6 +681,17 @@ MonoBehaviour:
       pas encore sur place, bien que je pouvais les entendre se rapprocher de plus
       en plus\u2026 "
     - "Une seule solution : la fuite ! Je me suis \xE9lanc\xE9 vers ma voiture\u2026"
+  dialogues_en:
+  - name: Kids
+    sentences:
+    - 'And you managed to get out of the bank?...
+
+'
+  - name: Grandpa
+    sentences:
+    - " Let's just say that Grandpa was busy... The policemen weren't there yet,
+      although I could hear them getting closer and closer...  plus\u2026 "
+    - 'After loading all the bars into the car, I took off in a hurry... '
   nextDialogue: 0
 --- !u!224 &1223300697
 RectTransform:

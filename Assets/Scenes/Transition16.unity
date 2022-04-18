@@ -175,7 +175,7 @@ MonoBehaviour:
     sentences:
     - "Et oui\u2026 M\xEAme en \xE9tant \xE0 pied, j\u2019\xE9tais plus rapide que
       ces policiers ! \u2026"
-    - "haha ! Ils ne faisaient pas les fiers ! \u2026"
+    - "Hahaha ! Ils ne faisaient pas les fiers ! \u2026"
     - "On attrape pas papi facilement ! Aujourd\u2019hui, j\u2019ai la chance de
       pouvoir vous raconter mon histoire et \xE7a, \xE7a n'a pas de prix\u2026"
   - name: Enfants
@@ -189,6 +189,27 @@ MonoBehaviour:
   - name: Enfants
     sentences:
     - Bonne nuit papi !
+  dialogues_en:
+  - name: Kids
+    sentences:
+    - Did you manage to escape?...
+  - name: Grandpa
+    sentences:
+    - "Yes... Even if I was on foot, I was faster than those policemen ! ...\r"
+    - Hahaha! They were not proud! ...
+    - You don't catch grandpa easily! Today, I have the chance to tell you my story
+      and that's priceless...
+  - name: Kids
+    sentences:
+    - Another story! Another one!...
+  - name: Grandpa
+    sentences:
+    - No! That's all for tonight, it's time to go to sleep because the sandman will
+      come soon...
+    - Good night children!...
+  - name: Kids
+    sentences:
+    - Good night Grandpa!
   nextDialogue: 0
 --- !u!224 &2234281
 RectTransform:

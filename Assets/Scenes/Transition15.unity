@@ -259,6 +259,23 @@ MonoBehaviour:
   - name: Enfants
     sentences:
     - Bonne nuit papi !
+  dialogues_en:
+  - name: Grandpa
+    sentences:
+    - Unfortunately, with all that money, I was pretty slow...
+    - 'So they finally caught up with me... '
+    - Be smarter than your grandpa! And now to bed...
+  - name: Kids
+    sentences:
+    - Another story! Another one!
+  - name: Grandpa
+    sentences:
+    - No! That's all for tonight, it's time to go to sleep because the sandman will
+      come soon...
+    - Good night children!...
+  - name: Kids
+    sentences:
+    - Good night Grandpa!
   nextDialogue: 0
 --- !u!224 &134501097
 RectTransform:

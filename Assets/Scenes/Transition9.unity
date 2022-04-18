@@ -363,6 +363,17 @@ MonoBehaviour:
   - name: "Grand-p\xE8re"
     sentences:
     - "Bien s\xFBr ! Je n\u2019ai donc pas eu le choix, j\u2019ai d\xFB courir\u2026"
+  dialogues_en:
+  - name: Grandpa
+    sentences:
+    - What bad luck! What bad luck!...
+    - Even with the key, I couldn't open my own car...
+  - name: Kids
+    sentences:
+    - Even without the money, the police were still chasing you?
+  - name: Grandpa
+    sentences:
+    - Of course! So I had no choice but to run...
   nextDialogue: 0
 --- !u!224 &816858235
 RectTransform:

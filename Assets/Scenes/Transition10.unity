@@ -961,6 +961,19 @@ MonoBehaviour:
     sentences:
     - "Bien s\xFBr ! Je n\u2019ai donc pas eu le choix, j\u2019ai d\xFB d\xE9marrer
       sur les chapeaux de roues\u2026"
+  dialogues_en:
+  - name: Grandpa
+    sentences:
+    - 'Fortunately, I had my car near the bank!
+
+'
+    - So I opened my door and jumped in!...
+  - name: Kids
+    sentences:
+    - Even without the money, the police were still chasing you?
+  - name: Grandpa
+    sentences:
+    - "Of course! So I had no choice, I had to drive away\u2026"
   nextDialogue: 0
 --- !u!224 &1894309314
 RectTransform:

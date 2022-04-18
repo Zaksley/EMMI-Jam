@@ -189,6 +189,28 @@ MonoBehaviour:
   - name: Enfants
     sentences:
     - Bonne nuit papi !
+  dialogues_en:
+  - name: Kids
+    sentences:
+    - "And they caught you?...\r"
+  - name: Grandpa
+    sentences:
+    - Unfortunately, yes... I took too long to get the gold bars and when I left
+      the bank, the police were waiting for me at the entrance and arrested me and
+      threw me in jail...
+    - I was so close to making it! A few seconds more would have been enough for
+      me to take the loot...
+  - name: Kids
+    sentences:
+    - Another story! Another one!...
+  - name: Grandpa
+    sentences:
+    - No! That's all for tonight, it's time to go to sleep because the sandman will
+      come soon...
+    - Good night children!...
+  - name: Kids
+    sentences:
+    - Good night Grandpa!
   nextDialogue: 0
 --- !u!224 &290145148
 RectTransform:

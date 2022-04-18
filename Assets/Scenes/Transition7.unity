@@ -637,6 +637,34 @@ MonoBehaviour:
   - name: Enfants
     sentences:
     - Bonne nuit papi !
+  dialogues_en:
+  - name: Kids
+    sentences:
+    - Is the boo-boo on your head from the accident?...
+  - name: Grandpa
+    sentences:
+    - 'Yes... After I got out of the car, which was nothing but a pile of junk, I
+      ran into the forest where I hid from the policemen who were chasing me...
+
+'
+    - " It was only after the chase that I started to feel the pain and to understand
+      that I was seriously injured...\r"
+    - Despite my injuries, I made it and at the time I was proud of it. I was very
+      lucky that I got away with it and that the police never caught me...
+    - So don't do anything stupid! That's the moral of my story...
+  - name: Kids
+    sentences:
+    - 'We want another story! One more!...
+
+'
+  - name: Grandpa
+    sentences:
+    - No! That's all for tonight, it's time to go to sleep because the sandman will
+      come soon...
+    - Good night children!...
+  - name: Kids
+    sentences:
+    - Good night Grandpa!
   nextDialogue: 0
 --- !u!224 &1031693115
 RectTransform:

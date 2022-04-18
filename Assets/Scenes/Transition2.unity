@@ -414,6 +414,17 @@ MonoBehaviour:
       sonnait, je pouvais entendre les sir\xE8nes se rapprocher\u2026"
     - "Je devais faire vite et m\u2019emparer des 10 millions de dollars avant que
       les policiers ne m\u2019attrapent\u2026"
+  dialogues_en:
+  - name: Kids
+    sentences:
+    - Do you still remember the code grandpa?...
+  - name: Grandpa
+    sentences:
+    - "You know kids, Grandpa has many talents, but memory was never one of them...\r"
+    - That's why I tattooed the code on my arm as a symbol of that success...
+    - Anyway, I was now in the vault. The alarm was ringing, I could hear the sirens
+      getting closer...
+    - I had to hurry and get the $10 million before the police caught me...
   nextDialogue: 0
 --- !u!224 &338822449
 RectTransform:

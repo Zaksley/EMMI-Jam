@@ -52,6 +52,7 @@ public class dialogueTransition0 : MonoBehaviour
         {
             nextDialogue = false;
             numberDialogue+=1;
+
             if (language == 0){
                 length = dialogues.Length;
             }
@@ -61,8 +62,11 @@ public class dialogueTransition0 : MonoBehaviour
             
             if (length > numberDialogue)
             {
-                DialogueManager.instance.startDialogue(dialogues[numberDialogue]);
+                
+                if (language == 0)  DialogueManager.instance.startDialogue(dialogues[numberDialogue]);
+                else DialogueManager.instance.startDialogue(dialogues_en[numberDialogue]);
             }
+
             else 
             {
                 manager.nextGame();

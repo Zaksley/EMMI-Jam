@@ -136,7 +136,7 @@ public class detector : MonoBehaviour
             }
         }
 
-        if (numberOfArrow == 0)
+        if (numberOfArrow ==0 || (numberOfArrow == 1 && numberLifes == 1) || (numberOfArrow == 2 && numberLifes == 0))
         {
                 audioSource.PlayOneShot(win, volume);
                 manager.victory();         
